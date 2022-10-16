@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DESKTOP7</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+	</head>
+	<body>
+		<div class = "navbar">
+  			<nav>
+                <ul>
+                   	<li><a href= {% if var == 'PROFILE' %} {% block content3 %} "{{url_for('home')}}" {% endblock content3 %} {% else %} {% block content4 	%} "{{url_for('home')}}" {% endblock content4 %} {% endif %}>HOME</a></li>
+					<li><a href="{{url_for('product')}}">PRODUCTS</a></li>
+                    <li><a href="{{url_for('dashboard')}}">CARTS</a></li>
+                    <li><a href= {% if var == 'PROFILE' %} {% block content %} "{{url_for('profile')}}" {% endblock content %} {% else %} {% block content2 %} '{{url_for('login')}}' { {% endblock content2 %} {% endif %} > {{var}} </a></li>
+                </ul>
+            </nav>
+        </div> 
+        <div class="container">
+        	<div class="container_product">
+        		<div class = "image-div">
+        			<img src = "{{url_for('static', filename = 'images/cpu7.jpg')}}">
+        			<div class="section1">
+						<form action="/cart", method="POST">
+        					<div class="header1">DESKTOP7</div>
+        					<div class="header2">$249.99</div>
+        					<input type = 'submit' class="buy" value="Buy Now" name = 'Buy15'>
+							<input type = 'submit' class = 'addcart' name = 'addcart15' value="Add to Cart">
+						</form>
+					</div>
+        			<div class="section2">
+        				<div class = "line"></div>
+        				<p class='about'>
+        					<h3>About This Item</h3>
+        					<br>
+        					<ul>
+<li> Intel Core i5 6500 3.2GHz Processor</li><li> 16GB DDR3-1600 RAM</li><li> 512GB SSD</li><li> Intel HD Graphics 530</li><li> Windows 10 Pro</li><li> 10/100/1000 LAN</li><li> Display Not Included</li></ul>
+        				</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+	</body>
+</html>

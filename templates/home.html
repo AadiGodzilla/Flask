@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/css/home.css">
+        <title>Our Website</title>
+    </head>
+    <body>
+            <div class = "navbar">
+                <nav>
+                    <ul>
+                        <li><a href= {% if var == 'PROFILE' %} {% block content3 %} "{{url_for('home')}}" {% endblock content3 %} {% else %} {% block content4 %} "{{url_for('home')}}" {% endblock content4 %} {% endif %}>HOME</a></li>
+                        <li><a href="{{url_for('product')}}">PRODUCTS</a></li>
+                        <li><a href="{{url_for('dashboard')}}">CARTS</a></li>
+                        <li><a href= 
+                            {% if var == 'PROFILE' %} 
+                                {% block content %} 
+                                    "{{url_for('profile')}}" 
+                                {% endblock content %} 
+                            {% else %} 
+                                {% block content2 %} 
+                                    '{{url_for('login')}}' 
+                                {% endblock content2 %} 
+                            {% endif %} > {{var}} </a></li>
+                    </ul>
+                </nav>
+            </div> 
+            <div class = 'banner'>
+                <div class="headers">
+                    <p class = 'header1'>WELCOME TO OUR E-COMMERCE WEBSITE</p>
+                    <p class = 'header2'>Get Started</p>
+                </div> 
+                <a href={% if var == 'PROFILE' %} {% block content5 %} "{{url_for('product')}}" {% endblock content5 %} {% else %} {% block content6 %} "{{url_for('signup')}}" {% endblock content6 %} {% endif %}><button>{{button_var}}</button></a>
+            </div>
+    </body>
+</html>

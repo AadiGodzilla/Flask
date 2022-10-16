@@ -1,0 +1,102 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    background-color: rgb(155, 155, 155);
+}
+
+.signup_div {
+    position: absolute;
+    top: 25%;
+    margin-left: 37.5%;
+    height: 370px;
+    width: 350px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.signup_div form input[type='email'] {
+    margin-bottom: 10px;
+    margin-left: 10%;
+    width: 77%;
+    height: 20px;
+    background-color: white;
+    border-width: 1px;
+    position: relative;
+    top: 30px;
+    padding: 10px 5px;
+}
+
+.signup_div form input[type='password'] {
+    top: 32px;
+    margin-left: 10%;
+    width: 77%;
+    height: 20px;
+    background-color: white;
+    border-width: 1px;
+    position: relative;
+    padding: 10px 5px;
+}
+
+.signup_div form p {
+    margin-top: 20px;
+    margin-left: 10%;
+    background-color: white;
+    position: relative;
+    top: 25px;
+}
+
+.signup_div form input[type='submit'] {
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(216, 112, 147);
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    top: 40px;
+    cursor: pointer;
+}
+
+.container .signup_div .header {
+    position: relative;
+    top: 20px;
+    left: 10%;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.signup_div form input[type='submit']:hover {
+    background-color: rgba(216, 112, 147, 0.6);
+    border-width: 20px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
+} 
+
+.login_link {
+    position: relative;
+    top: 16%;
+    left: 0%;
+    text-align: center;
+}
+
+.login_link a {
+    position: relative;
+    top: 6px;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 15px;
+}

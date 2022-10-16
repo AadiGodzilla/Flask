@@ -1,0 +1,159 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(64, 139, 224);
+}
+
+.navbar nav ul {
+    position: relative;
+    background-color: rgb(64, 139, 224);
+    list-style-type: none;
+    float: left;
+    padding: 2px;
+}
+
+.navbar nav ul li {
+    position: relative;
+    list-style-type: none;
+    float: left;
+    margin: 5px;
+}
+
+.navbar nav ul li a {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 16px 13px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(64, 139, 224);
+}
+
+.navbar nav ul li a:hover {
+    background-color: rgb(0, 45, 128);
+}
+
+.container {
+    position: static;
+    width: 100%;
+    height: 100%;
+    background-color: #8D8383;
+}
+
+.container_product {
+    position: relative;
+    margin: auto;
+    top: 15%;
+    width: 80%;
+    height: 70%;
+    max-height: 70%;
+    background-color: white;
+}
+
+.image-div {
+    position: relative;
+    top: 9%;
+    width: 30%;
+    height: 100%;
+}
+
+.image-div img {
+    position: inherit;
+    width: 100%;
+}
+
+.image-div .section1 {
+    position: relative;
+    bottom: 52%;
+    width: relative;
+    left: 20px;
+}
+
+.image-div .section2 {
+    position: relative;
+    margin-left: calc(100% + 100%);
+    bottom: calc(100% + 5%);
+    height: relative;
+    width: 100%;
+    max-height: relative;
+}
+
+.image-div .header1 {
+    position: relative;
+    margin-bottom: 20px;
+    left: 100%;
+    bottom: 90%;
+    font-size: 42px;
+    font-family: Arial;
+    width: relative;
+}
+
+.about {
+    height: relative;
+    max-height: 5px;
+}
+
+.image-div .header2 {
+    position: relative;
+    margin-bottom: 20px;
+    left: 100%;
+    bottom: 70%;
+    font-family: Arial;
+    font-size: 24px;
+    color: orange;
+}
+
+.image-div .buy {
+    position: relative;
+    left: 100%;
+    bottom: 40%;
+    width: 30%;
+    height: 10%;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.buy:hover {
+    background-color: grey;
+    border: none;
+}
+
+.image-div .addcart {
+    position: relative;
+    left: 100%;
+    bottom: 60%;
+    width: 35%;
+    height: 10%;
+    color: white;
+    font-size: 15px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.image-div .addcart:hover {
+    background-color: grey;
+    border-width: 0px;
+}
+
+.image-div .section2 ul li {
+    font-size: 20px;
+    margin-bottom: 2px;
+    max-height: 85%;
+    max-width: 100%;
+}
+
+.image-div .section1 button {
+    cursor: pointer;
+}
+
+.image-div .section1 button:hover {
+    background-color: grey;
+    border-width: 0px;
+}

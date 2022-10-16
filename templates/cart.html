@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cart</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/cart.css')}}">
+	</head>
+	<body>
+		<div class = "navbar">
+            <nav>
+                <ul>
+                    <li><a href= "{{url_for('home')}}">HOME</a></li>
+                    <li><a href="{{url_for('product')}}">PRODUCTS</a></li>
+                    <li><a href="{{url_for('dashboard')}}">CARTS</a></li>
+                    <li><a href= {% if var == 'PROFILE' %} 
+                                    {% block content %} 
+                                        "{{url_for('profile')}}" 
+                                    {% endblock content %} 
+                                {% else %} 
+                                    {% block content2 %} 
+                                        '{{url_for('login')}}' 
+                                    {% endblock content2 %} 
+                                {% endif %} > {{var}} </a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+        <div class="container">
+            <div class="subcont">
+                <h1>Customer's Cart</h1>
+                <pre>
+                    <table class = 'table' id = 'table'>
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Product</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for rows in data %}
+                                <tr>
+                                    <td>{{loop.index}}</td>
+                                    <td>{{rows[0]}}</td>
+                                    <td>{{rows[1]}}</td>
+                                </tr>
+                            {% endfor %}  
+                        </tbody>
+                    </table>    
+                </pre>
+                <table class = 'total_table' align="center">
+                    <thead>
+                        <tr>
+                            <th style="width: 66.7%">Total</th>
+                            <th>${{total}}</th>
+                        </tr>
+                    </thead>
+                </table>
+                <form action="/cart", method="POST">
+                    {% if total == 0 %}
+                        <input type="submit", name = 'buyall', value="BUY ALL", id = 'buyall' disabled>    
+                    {% else %}    
+                        <input type="submit", name = 'buyall', value="BUY ALL", id = 'buyall'>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

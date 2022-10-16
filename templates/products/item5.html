@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>LAPTOP5</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+	</head>
+	<body>
+		<div class = "navbar">
+  			<nav>
+                <ul>
+                   	<li><a href= {% if var == 'PROFILE' %} {% block content3 %} "{{url_for('home')}}" {% endblock content3 %} {% else %} {% block content4 	%} "{{url_for('home')}}" {% endblock content4 %} {% endif %}>HOME</a></li>
+					<li><a href="{{url_for('product')}}">PRODUCTS</a></li>
+                    <li><a href="{{url_for('dashboard')}}">CARTS</a></li>
+                    <li><a href= {% if var == 'PROFILE' %} {% block content %} "{{url_for('profile')}}" {% endblock content %} {% else %} {% block content2 %} '{{url_for('login')}}' { {% endblock content2 %} {% endif %} > {{var}} </a></li>
+                </ul>
+            </nav>
+        </div> 
+        <div class="container">
+        	<div class="container_product">
+        		<div class = "image-div">
+        			<img src = "{{url_for('static', filename = 'images/product5.jpg')}}">
+        			<div class="section1">
+						<form action="/cart", method="POST">
+        					<div class="header1">LAPTOP5</div>
+        					<div class="header2">$3699.99</div>
+        					<input type = 'submit' class="buy" value="Buy Now" name = 'Buy5'>
+							<input type = 'submit' class = 'addcart' name = 'addcart5' value="Add to Cart">
+						</form>
+					</div>
+        			<div class="section2">
+        				<div class = "line"></div>
+        				<p class='about'>
+        					<h3>About This Item</h3>
+        					<br>
+        					<ul>
+								<li> Intel Core i9 12th Gen 12950HX 2.3GHz Processor</li><li> NVIDIA GeForce RTX 3080Ti 16GB GDDR6</li><li> 64GB DDR5-4800 RAM</li><li> 2TB Solid State Drive (RAID 0)</li><li> Microsoft Windows 11 Pro</li><li> 10/100/1000 Network</li><li> 2x2 Wi-Fi 6E 802.11ax+Bluetooth 5.2</li><li> 17.3" WQHD IPS Anti-Glare 240Hz Display</li>
+							</ul>
+        				</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+	</body>
+</html>

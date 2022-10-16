@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> SignUp Page </title>
+        <link rel="stylesheet" href="static/css/signup.css">
+    </head>
+    <body>
+        <div class = 'container'>
+            <div class = 'signup_div'>
+                <p class="header"> SIGN-UP </p>
+                <form action="/signup" method="POST">
+                    <p>Email <br></p>
+                        <input type="email", name="email-address", class="email", placeholder="Enter Email Address">
+                    
+                    <p>Password <br> </p>
+                        <input type="password", name = 'passwd', class = 'password', placeholder="Enter Password">
+                    <input type="submit" value="SIGN-UP">
+                </form>
+                <div class = 'login_link'>
+                    <p>Already Have a Account</p>
+                    <a href="{{url_for('login')}}">Goto Login Page</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

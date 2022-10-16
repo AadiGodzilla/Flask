@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{url_for('static', filename = 'css/purchase.css')}}">
+	<title>Purchase</title>
+</head>
+<body bgcolor = 'grey'>
+	<div class = 'container'>
+		<div class = 'subcont'>
+			<p>Enter the amount to purchase the product</p>
+			<form action="/purchase", method = 'POST'>
+				<input type="text", name = 'amt', placeholder="Enter the amount">
+				<br>
+				<input type="submit", name = 'amt_submit', value = 'Purchase'>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
