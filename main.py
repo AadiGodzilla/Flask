@@ -21,12 +21,6 @@ var = None
 email = None
 total = 0
 
-@app.before_request
-def before_request():
-    session.permanent = True
-    app.parmanent_session_lifetime = datetime.timedelta(minutes=20)
-    session.modified = True
-
 @app.route('/')
 def home():
     if var == 'PROFILE':    
@@ -164,8 +158,6 @@ def products(itemname):
         else:
             return render_template('error1.html', error_message = 'Please Login or Create an Account')
 
-
-
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
     global var
@@ -176,10 +168,11 @@ def signup():
     if request.method == 'POST':
         email = request.form['email-address']
         passwd = request.form['passwd']
-        cursor = mysql.connection.cursor()
+        conn = connect(host = 'localhost', password = '', user = 'root', database = 'main')
+        cursor = conn.cursor()
         cursor.execute('INSERT INTO profile(Email_Address, Password) VALUES(%s, %s);', (email, passwd))
-        mysql.connection.commit()
-        cursor.close()
+        conn.commit()
+        conn.close()
         return render_template('home.html')
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -206,7 +199,6 @@ def login():
             flash('Incorrect Email or Password')
             return render_template('login.html'), email
             
-
 @app.route('/profile', methods = ['POST', 'GET'])
 def profile():
     global email, var
