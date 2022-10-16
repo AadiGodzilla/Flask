@@ -210,7 +210,7 @@ def login():
 
 @app.route('/profile', methods = ['POST', 'GET'])
 def profile():
-    global email, var, SNO
+    global email, var
 
     if request.method == 'GET':
         return render_template('profile.html', account_var = email)
@@ -232,7 +232,6 @@ def profile():
             conn2 = connect(host = 'localhost', user = 'root', password = '', database = 'carts')
             cur2 = conn2.cursor()
             cur2.execute('DELETE FROM `%s`', (email,))
-            SNO = 0
             conn2.commit()
             return redirect(url_for('home'))
 
@@ -739,7 +738,7 @@ def payment():
 
 @app.route('/purchase', methods = ['POST', 'GET'])
 def purchase():
-    global total, email, SNO
+    global total, email
     
     if request.method == 'GET':
         return render_template('purchase.html')
