@@ -1,7 +1,6 @@
-import uuid, re, datetime, math
+import uuid, re, math
 from bs4 import BeautifulSoup
-from flask import Flask, render_template, request, redirect, url_for, flash, session
-from flask_mysqldb import MySQL
+from flask import Flask, render_template, request, redirect, url_for, flash
 from mysql.connector import connect
 
 app = Flask(__name__)
