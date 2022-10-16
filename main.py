@@ -20,7 +20,6 @@ mysql = MySQL(app)
 
 var = None
 email = None
-SNO = 0
 total = 0
 
 @app.before_request
