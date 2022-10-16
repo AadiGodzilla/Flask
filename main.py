@@ -10,13 +10,6 @@ uuid = uuid.uuid4().hex
 
 app.config['SECRET_KEY'] = uuid 
 
-app.config['MYSQL_HOST'] = "localhost"
-app.config['MYSQL_USER'] = "root"
-app.config['MYSQL_PASSWORD'] = ""
-app.config['MYSQL_DB'] = 'main'
-
-mysql = MySQL(app)
-
 var = None
 email = None
 total = 0
