@@ -116,12 +116,15 @@
     height: 10%;
     font-size: 15px;
     color: white;
-    background-color: black;
+    background-color: rgb(64, 139, 224);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
 }
 
 .buy:hover {
-    background-color: grey;
+    background-color: #76A7DF;
     border: none;
 }
 
@@ -133,12 +136,15 @@
     height: 10%;
     color: white;
     font-size: 15px;
-    background-color: black;
+    background-color: rgb(64, 139, 224);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
 }
 
 .image-div .addcart:hover {
-    background-color: grey;
+    background-color: #76A7DF;
     border-width: 0px;
 }
 
@@ -154,6 +160,6 @@
 }
 
 .image-div .section1 button:hover {
-    background-color: grey;
+    background-color: #76A7DF;
     border-width: 0px;
 }
