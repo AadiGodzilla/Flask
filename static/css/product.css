@@ -59,6 +59,17 @@
     left: 1%;
 }
 
+button {
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(64, 139, 224);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
 .product1 {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -82,15 +93,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product1 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product1 .name {
@@ -122,15 +134,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product2 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product2 .name {
@@ -162,15 +175,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product3 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product3 .name {
@@ -203,15 +217,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product3 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product3 .name {
@@ -244,15 +259,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product4 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product4 .name {
@@ -285,15 +301,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product5 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product5 .name {
@@ -326,15 +343,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product6 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product6 .name {
@@ -367,15 +385,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product7 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product7 .name {
@@ -408,15 +427,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product8 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product8 .name {
@@ -449,15 +469,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product9 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product9 .name {
@@ -490,15 +511,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product10 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product10 .name {
@@ -531,15 +553,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product11 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product11 .name {
@@ -572,15 +595,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product12 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product12 .name {
@@ -613,15 +637,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product13 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product13 .name {
@@ -654,15 +679,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product14 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product14 .name {
@@ -695,15 +721,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product15 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product15 .name {
@@ -736,15 +763,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product16 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product16 .name {
@@ -777,15 +805,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product17 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product17 .name {
@@ -818,15 +847,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product18 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product18 .name {
@@ -859,15 +889,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product19 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product19 .name {
@@ -900,15 +931,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product20 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product20 .name {
@@ -941,15 +973,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product21 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product21 .name {
@@ -982,15 +1015,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product22 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product22 .name {
@@ -1023,15 +1057,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product23 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product23 .name {
@@ -1064,15 +1099,16 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: rgb(64, 139, 224);
     text-align: center;
     cursor:pointer;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
     width: 100%;
     font-size: 18px;
 }
 
 .product24 button:hover {
-    background-color: rgb(39, 39, 39);
+    background-color: #76A7DF;
 }
 
 .product24 .name {
