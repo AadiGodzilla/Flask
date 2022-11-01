@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/admin.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div class = 'container'>
+        <div class="accounts">
+            <h1>Accounts</h1>
+            <div class = 'table_ac'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Email Address</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rows in account_data %}
+                        <tr>
+                            <td>{{loop.index}}</td>
+                            <td>{{rows[0]}}</td>
+                            <td>{{rows[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="welcome">
+            <h1>Revenue</h1>
+            <div class="revenue_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>Products Purchased</th>
+                            <th>Customer Email Address</th>
+                            <th>Products Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rows in revenue %}
+                        <tr>
+                            <td>{{loop.index}}</td>
+                            <td>{{rows[0]}}</td>
+                            <td>{{rows[1]}}</td>
+                            <td>${{rows[2]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="net">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 70%;">Net Sales (-13% VAT & -10% Service Taxes)</th>
+                            <th>${{net}}</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="billingInfo">
+            <div class="table_bill">
+                <h1>Customers Billing Info.</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No.</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email Address</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Zip Code</th>
+                            <th>Name on Card</th>
+                            <th>Credit Card No.</th>
+                            <th>Exp. Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rows in billing_data %}
+                            <tr>
+                                <td>{{loop.index}}</td>
+                                <td>{{rows[0]}}</td>
+                                <td>{{rows[1]}}</td>
+                                <td>{{rows[2]}}</td>
+                                <td>{{rows[3]}}</td>
+                                <td>{{rows[4]}}</td>
+                                <td>{{rows[5]}}</td>
+                                <td>{{rows[6]}}</td>
+                                <td>{{rows[7]}}</td>
+                                <td>{{rows[8]}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
