@@ -118,6 +118,10 @@ img {
     color: white;
     padding: 15px;
     background-color: rgb(64, 139, 224);
+    background-color: rgb(64, 139, 224);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
     border-radius: 20px;
     text-align: center;
@@ -127,6 +131,7 @@ img {
 
 .buy:hover {
     background-color: rgb(112, 175, 248);;
+    background-color: #76A7DF;
     border: none;
 }
 
@@ -139,6 +144,10 @@ img {
     color: white;
     font-size: 15px;
     background-color: rgb(64, 139, 224);;
+    background-color: rgb(64, 139, 224);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
     border-radius: 20px;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
@@ -146,6 +155,10 @@ img {
 
 .addcart:hover {
     background-color: rgb(112, 175, 248);
+}
+
+.image-div .addcart:hover {
+    background-color: #76A7DF;
     border-width: 0px;
 }
 
@@ -163,6 +176,10 @@ img {
 
 .section1 button:hover {
     background-color: rgb(112, 175, 248);
+}
+
+.image-div .section1 button:hover {
+    background-color: #76A7DF;
     border-width: 0px;
 }
 
