@@ -8,46 +8,49 @@
 </head>
 <body>
 	<div class = 'container'>
-		<form action="/payment" method="POST">
-			<div class="billing">
-				<h1>Billing Address</h1>
-				<br>
-				<p>First Name</p>
-				<input type="text", name="fname", placeholder="Enter you First Name">
-				<br>
-				<br>
-				<p>Last Name</p>
-				<input type="text", name="lname", placeholder="Enter your Last Name">
-				<br>
-				<br>
-				<p>Address</p>
-				<input type="text", name = 'Address', placeholder="Enter Address">
-				<br>
-				<br>
-				<p>City</p>
-				<input type="text", name = 'City', placeholder="Enter City">
-				<br>
-				<br>
-				<p>Zip Code</p>
-				<input type="text", name="zip", placeholder="Enter ZipCode">
-			</div>
-			<div class="payment">
-				<h1>Payment Information</h1>
-				<br>
-				<p>Name on Card</p>
-				<input type="text", name='noc', placeholder="Enter the name on card">
-				<br>
-				<br>
-				<p>Credit Card Number</p>
-				<input type="text", name='creditno', placeholder="Enter the Credit Card Number">
-				<br>
-				<br>
-				<p>Exp. Date</p>
-				<input type="text", name='expdate', placeholder="YYYY-MM-DD">
-				<input type="submit", name='submit', value='Continue to checkout'>
-			</div>
-		</form>	
+		<div class = 'subcont'>
+			<form action="/payment" method="POST">
+				<div class="billing">
+					<h1>Billing Address</h1>
+					<br>
+					<p>First Name</p>
+					<input type="text", name="fname", placeholder="Enter you First Name">
+					<br>
+					<br>
+					<p>Last Name</p>
+					<input type="text", name="lname", placeholder="Enter your Last Name">
+					<br>
+					<br>
+					<p>Address</p>
+					<input type="text", name = 'Address', placeholder="Enter Address">
+					<br>
+					<br>
+					<p>City</p>
+					<input type="text", name = 'City', placeholder="Enter City">
+					<br>
+					<br>
+					<p>Zip Code</p>
+					<input type="text", name="zip", placeholder="Enter ZipCode">
+				</div>
+				<div class="payment">
+					<h1>Payment Information</h1>
+					<br>
+					<p>Name on Card</p>
+					<input type="text", name='noc', placeholder="Enter the name on card">
+					<br>
+					<br>
+					<p>Credit Card Number</p>
+					<input type="text", name='creditno', placeholder="Enter the Credit Card Number">
+					<br>
+					<br>
+					<p>Exp. Date</p>
+					<input type="text", name='expdate', placeholder="YYYY-MM-DD">
+					<input type="submit", name='submit', value='Continue to checkout'>
+				</div>
+			</form>	
+		</div>
 	</div>
+	
 	
 </body>
 </html>

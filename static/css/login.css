@@ -12,9 +12,10 @@
 }
 
 .login_div {
-    position: absolute;
-    top: 25%;
-    margin-left: 37.5%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
     height: 340px;
     width: 350px;
     background-color: white;
@@ -24,6 +25,7 @@
 
 .login_div form input[type='email'] {
     margin-bottom: 10px;
+    border-radius: 10px;
     margin-left: 10%;
     width: 77%;
     height: 20px;
@@ -36,6 +38,7 @@
 
 .login_div form input[type='password'] {
     top: 32px;
+    border-radius: 10px;
     margin-left: 10%;
     width: 77%;
     height: 20px;
@@ -62,12 +65,13 @@
     color: white;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(216, 112, 147);
+    background-color: rgb(64, 139, 224);
     border: none;
     border-radius: 10px;
     position: relative;
     top: 40px;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .container .login_div .header {
@@ -81,7 +85,7 @@
 }
 
 .login_div form input[type='submit']:hover {
-    background-color: rgba(216, 112, 147, 0.6);
+    background-color: rgba(64, 139, 224, 0.6);
     border-width: 20px;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
 } 

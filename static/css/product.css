@@ -4,14 +4,22 @@
     background-color: rgb(155, 155, 155);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .navbar {
-    position: absolute;
+    position: fixed;
     width: 100%;
+    z-index: 100;
     background-color: rgb(64, 139, 224);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 .navbar nav ul {
     position: relative;
+    margin-left: 1.5%;
     background-color: rgb(64, 139, 224);
     list-style-type: none;
     float: left;
@@ -20,6 +28,7 @@
 
 .navbar nav ul li {
     list-style-type: none;
+    background-color: rgb(64, 139, 224);;
     float: left;
     margin: 5px;
 }
@@ -31,9 +40,11 @@
     text-decoration: none;
     color: white;
     background-color: rgb(64, 139, 224);
+    transition: 0.5s;
 }
 
 .navbar nav ul li a:hover {
+    border-radius: 15px;
     background-color: rgb(0, 45, 128);
 }
 
@@ -44,1039 +55,88 @@
     background-color: rgb(155, 155, 155);
 }
 
-.laptop {
+.section {
     position: relative;
+    margin-left: 0.5%;
     left: 1%;
 }
 
-.cpu {
+.products {
+    background-color: white;
+    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.5);
+    width: 150px;
+    margin-left: 5px;
+    margin-top: 0.75%;
+    padding: 5px;
+    float: left;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+.price {
+    background-color: white;
+    color: grey;
+    font-size: 22px;
+}
+
+button {
+    border: 0px;
+    padding: 12px;
+    color: white;
+    background-color: rgb(64, 139, 224);
+    text-align: center;
+    cursor:pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(112, 175, 248);
+}
+
+.name {
+    background-color: white;
+    color: grey;
+    font-size: 22px;
+}
+
+.search {
     position: relative;
-    left: 1%;
+    top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 30%;
+    height: 40px;
+    margin-right: 2%;
+    float: right;
+    font-size: large;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
 }
 
-.periperals {
+.search_btn {
     position: relative;
-    left: 1%;
-}
-
-.product1 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product1 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product1 button {
+    top: 10px;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
     border: none;
-    outline: 0;
-    padding: 12px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: right;
+    cursor: pointer;
+    font-size: 16px;
     color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
+    background-color: rgb(0, 45, 128);
 }
 
-.product1 button:hover {
-    background-color: rgb(39, 39, 39);
+.search:focus {
+    outline: none;
 }
 
-.product1 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product2 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product2 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product2 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product2 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product2 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product3 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product3 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product3 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product3 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product3 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product3 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product3 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product3 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product3 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product3 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product4 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product4 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product4 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product4 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product4 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product5 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product5 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product5 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product5 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product5 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product6 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product6 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product6 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product6 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product6 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product7 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product7 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product7 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product7 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product7 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product8 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product8 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product8 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product8 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product8 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product9 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product9 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product9 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product9 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product9 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product10 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product10 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product10 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product10 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product10 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product11 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product11 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product11 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product11 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product11 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product12 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product12 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product12 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product12 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product12 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
 
-
-.product13 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product13 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product13 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product13 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product13 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product14 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product14 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product14 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product14 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product14 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product15 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product15 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product15 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product15 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product15 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product16 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product16 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product16 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product16 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product16 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product17 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product17 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product17 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product17 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product17 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product18 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product18 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product18 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product18 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product18 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product19 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product19 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product19 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product19 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product19 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product20 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product20 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product20 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product20 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product20 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product21 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product21 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product21 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product21 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product21 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product22 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product22 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product22 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product22 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product22 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product23 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product23 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product23 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product23 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product23 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-
-.product24 {
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    max-width: 150px;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding: 5px;
-    float: left;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.product24 .price {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}
-
-.product24 button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor:pointer;
-    width: 100%;
-    font-size: 18px;
-}
-
-.product24 button:hover {
-    background-color: rgb(39, 39, 39);
-}
-
-.product24 .name {
-    background-color: white;
-    color: grey;
-    font-size: 22px;
-}

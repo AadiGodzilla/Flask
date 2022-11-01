@@ -25,15 +25,15 @@
         </div>
         <br>
         <div class="container">
-            <div class="subcont">
+            <div class="subcont" style="border-radius: 20px;">
                 <h1>Customer's Cart</h1>
-                <pre>
+                <div class = 'table_div'>
                     <table class = 'table' id = 'table'>
                         <thead>
                             <tr>
-                                <th>S.No</th>
-                                <th>Product</th>
-                                <th>Price</th>
+                                <th style = 'width: 10%; border-color: black;'>S.No</th>
+                                <th style = 'border-color: black;'>Product</th>
+                                <th style = 'width: 20%; border-color: black;'>Price</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,7 +46,7 @@
                             {% endfor %}  
                         </tbody>
                     </table>    
-                </pre>
+                </div>
                 <table class = 'total_table' align="center">
                     <thead>
                         <tr>

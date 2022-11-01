@@ -4,62 +4,86 @@
 }
 
 .container {
-  background-color: white;
+  background-color: grey;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.subcont {
   position: relative;
-  left: 5%;
-  top: 20px;
-  width: 90%;
-  height: 600px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80%;
+  margin: auto;
+  background-color: white;
   border-radius: 20px;
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.6);
 }
 
 .billing {
-  background-color: grey;
   width: 50%;
-  height: 600px;
   border-radius: 0px;
 }
 
 h1 {
-  position: relative;
-  margin-left: 15px;
-  top: 15px;
-}
-
-input[type=text] {
-  position: relative;
-  top: 20px;
-  width: 80%;
-  height: 50px;
-  padding-left: 5px;
-  margin-left: 4.5%;
+  padding-top: 2%;
+  margin-left: 2%;
+  border-radius: 20px;
 }
 
 p {
+  margin-left: 3%;
+  margin-bottom: 0.25%;
+}
+
+input[type = text] {
   position: relative;
-  top: 20px;
-  margin-bottom: 10px;
-  margin-left: 25px;
-  font-family: Arial;
-  font-weight: bold;
+  left: 50%;
+  padding-left: 2%;
+  transform: translateX(-50%);
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+input[name = 'zip'] {
+  margin-bottom: 5%;
 }
 
 .payment {
-  position: relative;
-  background-color: grey;
+  position: absolute;
   width: 50%;
+  top: -50%;
   left: 50%;
-  bottom: 600px;
-  height : 600px;
-  border-radius: 0px;
+  height: 100%;
+  transform: translateY(50%);
+  float: right;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 input[type = 'submit'] {
-  position: absolute;
-  left: 8.5%;
-  top: 70%;
-  background-color: black;
-  color: white;
-  width: calc(80% + 10px);
+  position: relative;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(64, 139, 224);
+  width: 90%;
   height: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+input[type = 'submit']:hover {
+  background-color: rgb(64, 139, 224, 0.6);
 }

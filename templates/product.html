@@ -23,207 +23,212 @@
                         {% endblock content2 %} 
                     {% endif %} > {{var}} </a></li>
                 </ul>
+                <input type="search", class = 'search', placeholder = 'Search..', id = 'search'>
+                <input type="submit", class = 'search_btn', value = 'Search', onclick="search()">
             </nav>
         </div>
         <div class = 'product'>
-            <div class = 'laptop'>
-                <div class = "product1">
+            <div class = 'section'>
+                <div class = "products">
                     <img src="{{url_for('static', filename = 'images/product1.jpg')}}" style="width: 100%">
-                    <p class = 'name'> LAPTOP1 </p>
+                    <h3 class = 'name'> LAPTOP1 </h3>
                     <br>
                     <p class = "price"> $2399.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item1')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item1')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product2">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/product2.jpg')}}" style="width: 100%">
-                    <p class = 'name'> LAPTOP2 </p>
+                    <h3 class = 'name'> LAPTOP2 </h3>
                     <br>
                     <p class = "price"> $1399.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item2')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item2')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product3">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/product3.jpg')}}" style="width: 100%">
-                    <p class = 'name'> LAPTOP3 </p>
+                    <h3 class = 'name'> LAPTOP3 </h3>
                     <br>
                     <p class = "price"> $999.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item3')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item3')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product4">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/product4.jpg')}}" style="width: 100%">
-                    <p class = 'name'> LAPTOP4 </p>
+                    <h3 class = 'name'> LAPTOP4 </h3>
                     <br>
                     <p class = "price"> $459.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item4')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item4')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product5">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/product5.jpg')}}" style="width: 100%">
-                    <p class = 'name'> LAPTOP5 </p>
+                    <h3 class = 'name'> LAPTOP5 </h3>
                     <br>
                     <p class = "price"> $3699.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item5')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item5')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product6">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/product6.jpg')}}" style="width: 100%">
-                    <p class = 'name'> LAPTOP6 </p>
+                    <h3 class = 'name'> LAPTOP6 </h3>
                     <br>
                     <p class = "price"> $1299.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item6')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item6')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product7">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/product7.jpg')}}" style="width: 100%">
-                    <p class = 'name'> LAPTOP7 </p>
+                    <h3 class = 'name'> LAPTOP7 </h3>
                     <br>
                     <p class = "price"> $1899.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item7')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item7')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product8">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/product8.jpg')}}" style="width: 100%">
-                    <p class = 'name'> LAPTOP8 </p>
+                    <h3 class = 'name'> LAPTOP8 </h3>
                     <br>
                     <p class = "price"> $2999.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item8')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item8')}}"> <button>DETAILS</button> </a>
                 </div>
             </div>
-            <div class="cpu">
-                <div class="product9">
+            <div class="section">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/cpu1.jpg')}}" style="width: 100%">
-                    <p class = 'name'> DESKTOP1 </p>
+                    <h3 class = 'name'> DESKTOP1 </h3>
                     <br>
                     <p class = "price"> $1349.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item9')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item9')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product10">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/cpu2.jpg')}}" style="width: 100%">
-                    <p class = 'name'> DESKTOP2 </p>
+                    <h3 class = 'name'> DESKTOP2 </h3>
                     <br>
                     <p class = "price"> $1239.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item10')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item10')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product11">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/cpu3.jpg')}}" style="width: 100%">
-                    <p class = 'name'> DESKTOP3 </p>
+                    <h3 class = 'name'> DESKTOP3 </h3>
                     <br>
                     <p class = "price"> $649.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item11')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item11')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product12">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/cpu4.jpg')}}" style="width: 100%">
-                    <p class = 'name'> DESKTOP4 </p>
+                    <h3 class = 'name'> DESKTOP4 </h3>
                     <br>
                     <p class = "price"> $1799.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item12')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item12')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product13">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/cpu5.jpg')}}" style="width: 100%">
-                    <p class = 'name'> DESKTOP5 </p>
+                    <h3 class = 'name'> DESKTOP5 </h3>
                     <br>
                     <p class = "price"> $199.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item13')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item13')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product14">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/cpu6.jpg')}}" style="width: 100%">
-                    <p class = 'name'> DESKTOP6 </p>
+                    <h3 class = 'name'> DESKTOP6 </h3>
                     <br>
                     <p class = "price"> $899.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item14')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item14')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product15">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/cpu7.jpg')}}" style= 'width: 100%'>
-                    <p class = 'name'> DESKTOP7 </p>
+                    <h3 class = 'name'> DESKTOP7 </h3>
                     <br>
                     <p class = "price"> $249.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item15')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item15')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product16">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/cpu8.jpg')}}" style="width: 100%">
-                    <p class = 'name'> DESKTOP8 </p>
+                    <h3 class = 'name'> DESKTOP8 </h3>
                     <br>
                     <p class = "price"> $619.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item16')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item16')}}"> <button>DETAILS</button> </a>
                 </div>
             </div>
-            <div class = 'periperals'>
-                <div class="product17">
+            <div class = 'section'>
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/per1.jpg')}}" style="width: 100%">
-                    <p class = 'name'> MISC1 </p>
+                    <h3 class = 'name'> MISC1 </h3>
                     <br>
                     <p class = "price"> $34.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item17')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item17')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product18">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/per2.jpg')}}" style="width: 100%">
-                    <p class = 'name'> MISC2 </p>
+                    <h3 class = 'name'> MISC2 </h3>
                     <br>
                     <p class = "price"> $39.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item18')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item18')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product19">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/per3.jpg')}}" style="width: 100%">
-                    <p class = 'name'> MISC3 </p>
+                    <h3 class = 'name'> MISC3 </h3>
                     <br>
                     <p class = "price"> $119.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item19')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item19')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product20">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/per4.jpg')}}" style="width: 100%">
-                    <p class = 'name'> MISC4 </p>
+                    <h3 class = 'name'> MISC4 </h3>
                     <br>
                     <p class = "price"> $179.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item20')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item20')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product21">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/per5.jpg')}}" style="width: 100%">
-                    <p class = 'name'> MISC5 </p>
+                    <h3 class = 'name'> MISC5 </h3>
                     <br>
                     <p class = "price"> $349.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item21')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item21')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product22">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/per6.jpg')}}" style="width: 100%">
-                    <p class = 'name'> MISC6 </p>
+                    <h3 class = 'name'> MISC6 </h3>
                     <br>
                     <p class = "price"> $79.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item22')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item22')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product23">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/per7.jpg')}}" style="width: 100%">
-                    <p class = 'name'> MISC7 </p>
+                    <h3 class = 'name'> MISC7 </h3>
                     <br>
                     <p class = "price"> $99.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item23')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item23')}}"> <button>DETAILS</button> </a>
                 </div>
-                <div class="product24">
+                <div class="products">
                     <img src="{{url_for('static', filename = 'images/per8.jpg')}}" style="width: 100%">
-                    <p class = 'name'> MISC8 </p>
+                    <h3 class = 'name'> MISC8 </h3>
                     <br>
                     <p class = "price"> $43.99 </p>
                     <br>
-                    <a href="{{url_for('products', itemname = 'item24')}}"> <button>Add to Cart</button> </a>
+                    <a href="{{url_for('products', itemname = 'item24')}}"> <button>DETAILS</button> </a>
                 </div>
             </div>
         </div>    
     </body>
+
+    <script src = '../static/scripts/search.js'></script>
+
 </html>

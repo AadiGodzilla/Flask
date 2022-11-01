@@ -26,17 +26,18 @@ input {
     color: white;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(216, 112, 147);
+    background-color: rgb(64, 139, 224);
     border: none;
     border-radius: 10px;
     position: relative;
     bottom: 10px;
     left: 10%;
 	cursor: pointer;
+	transition: 0.4s;
 }
 
 input:hover {
-	background-color: rgba(216, 112, 147, 0.6);
+	background-color: rgba(64, 139, 224, 0.6);
 }
 
 h1, h2, h3 {

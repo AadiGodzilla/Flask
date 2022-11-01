@@ -5,12 +5,16 @@
 
 .navbar {
     position: absolute;
+    z-index: 100;
     width: 100%;
     background-color: rgb(64, 139, 224);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
 .navbar nav ul {
     position: relative;
+    margin-left: 1.5%;
     background-color: rgb(64, 139, 224);
     list-style-type: none;
     float: left;
@@ -20,6 +24,7 @@
 .navbar nav ul li {
     position: relative;
     list-style-type: none;
+    background-color: rgb(64, 139, 224);;
     float: left;
     margin: 5px;
 }
@@ -32,26 +37,30 @@
     text-decoration: none;
     color: white;
     background-color: rgb(64, 139, 224);
+    transition: 0.5s;
 }
 
 .navbar nav ul li a:hover {
+    border-radius: 15px;
     background-color: rgb(0, 45, 128);
 }
 
 .container {
-    position: static;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: #8D8383;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container_product {
     position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, 0.7);
     margin: auto;
     top: 15%;
     width: 80%;
     height: 70%;
-    max-height: 70%;
     background-color: white;
 }
 
@@ -62,98 +71,119 @@
     height: 100%;
 }
 
-.image-div img {
-    position: inherit;
+img {
     width: 100%;
 }
 
-.image-div .section1 {
+.section1 {
     position: relative;
-    bottom: 52%;
-    width: relative;
-    left: 20px;
+    top: -60%;
+    transform: translateY(-50%);
+    width: 20%;
+    left: 33%;
 }
 
-.image-div .section2 {
+.section2 {
     position: relative;
-    margin-left: calc(100% + 100%);
-    bottom: calc(100% + 5%);
-    height: relative;
-    width: 100%;
-    max-height: relative;
+    margin-left: calc(60%);
+    top: -100%;
+    width: 35%;
+    transform: translateY(-35%);
+    background-color: white;
 }
 
-.image-div .header1 {
+.header1 {
     position: relative;
     margin-bottom: 20px;
-    left: 100%;
     bottom: 90%;
     font-size: 42px;
     font-family: Arial;
     width: relative;
 }
 
-.about {
-    height: relative;
-    max-height: 5px;
-}
-
-.image-div .header2 {
+.header2 {
     position: relative;
     margin-bottom: 20px;
-    left: 100%;
     bottom: 70%;
     font-family: Arial;
     font-size: 24px;
     color: orange;
 }
 
-.image-div .buy {
+.buy {
     position: relative;
-    left: 100%;
     bottom: 40%;
-    width: 30%;
     height: 10%;
     font-size: 15px;
     color: white;
-    background-color: black;
+    padding: 15px;
+    background-color: rgb(64, 139, 224);
     cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
 }
 
 .buy:hover {
-    background-color: grey;
+    background-color: rgb(112, 175, 248);;
     border: none;
 }
 
-.image-div .addcart {
+.addcart {
     position: relative;
-    left: 100%;
+    border: none;
     bottom: 60%;
-    width: 35%;
+    padding: 15px;
     height: 10%;
     color: white;
     font-size: 15px;
-    background-color: black;
+    background-color: rgb(64, 139, 224);;
     cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
 }
 
-.image-div .addcart:hover {
-    background-color: grey;
+.addcart:hover {
+    background-color: rgb(112, 175, 248);
     border-width: 0px;
 }
 
-.image-div .section2 ul li {
+.section2 ul li {
     font-size: 20px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     max-height: 85%;
     max-width: 100%;
 }
 
-.image-div .section1 button {
+.section1 button {
     cursor: pointer;
+    transition: 0.4s;
 }
 
-.image-div .section1 button:hover {
-    background-color: grey;
+.section1 button:hover {
+    background-color: rgb(112, 175, 248);
     border-width: 0px;
+}
+
+h3 {
+    font-size: 36px;
+    text-align: left;
+}
+
+@media (min-width: 1366px) and (min-height: 768px) {
+    .section1 {
+        top: -60%;
+        transform: translateY(-50%);
+    }
+
+    .section2 {
+        margin-left: 57.5%;
+        top: -75%;
+        transform: translateY(-60%);
+    }
+
+    .section2 ul li {
+        font-size: 24px;
+    }
 }

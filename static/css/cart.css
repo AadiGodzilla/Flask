@@ -1,18 +1,21 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: white;
 }
 
 .navbar {
     position: absolute;
     width: 100%;
+    z-index: 100;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
     background-color: rgb(64, 139, 224);
 }
 
 .navbar nav ul {
     position: relative;
     background-color: rgb(64, 139, 224);
+    margin-left: 1.5%;
     list-style-type: none;
     float: left;
     padding: 2px;
@@ -20,6 +23,7 @@
 
 .navbar nav ul li {
     list-style-type: none;
+    background-color: rgb(64, 139, 224);
     float: left;
     margin: 5px;
 }
@@ -31,9 +35,11 @@
     text-decoration: none;
     color: white;
     background-color: rgb(64, 139, 224);
+    transition: 0.5s;
 }
 
 .navbar nav ul li a:hover {
+    border-radius: 15px;
     background-color: rgb(0, 45, 128);
 }
 
@@ -47,42 +53,37 @@
 
 .container {
     position: absolute;
-    top: 64px;
     width: 100%;
-    height: calc(100% - 64px);
-    background-color: white;
+    height: calc(100% + 15%);
+    top: -15%;
+    background-color: grey;
 }
 
 .subcont {
     position: relative;
-    top: 40px;
-    width: 60%;
+    border-radius: 20px;
+    top: 60%;
+    transform: translate(0%, -50%);
+    width: 80%;
     margin: auto;
-    height: relative;
     background-color: white;
-}
-
-pre {
-    max-height: 330px;
-    overflow: scroll;
 }
 
 .table {
     position: relative;
-    top: 0px;
-    width: 100%;
-    margin: left;
+    top: 5%;
+    width: 80%;
+    height: 20%;
+    margin: auto;
     color: black;
-    background-color: black;
-    border-width: 2px;
-    border-color: black;
-    margin-top: 5%;
+    background-color: white;
+    border-width: 1px solid black;
 }
 
 tr, th, td {
-    width: 140px;
     text-align: center;
     padding: 15px;
+    border: 1px solid black;
     border-collapse: collapse;
 }
 
@@ -95,7 +96,8 @@ tr, th, td {
 .total_table {
     position: relative;
     margin-top: 2%;
-    width : 100%;
+    margin: auto;
+    width : 80%;
     padding: 0px;
     background-color: black;
 }
@@ -106,30 +108,42 @@ tr, th, td {
     border-collapse: collapse;
 }
 
-input[type = 'submit'] {
-    margin-top: 2%;
-    margin-bottom: 2%;
+.table_div {
     position: relative;
-    width: 100%;
-    height: 58px;
+    width: 80%;
+    margin: auto;
+    max-height: 280px;
+    overflow-y: scroll;
+    margin-bottom: 2%;
+}
+
+input[type = 'submit'] {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    left: 10%;
+    position: relative;
+    padding: 15px;
+    width: 80%;
     background-color: #3366ff;
     color: white;
     font-size: 24px;
     border-width: 0px;
     cursor: pointer;
     border-radius: 20px;
+    transition: 0.4s;
 }
 
 input[type='submit']:hover {
-    background-color: darkblue;
+    background-color: rgb(112, 175, 248);
     border: 0px;
 }   
 
 .subcont h1 {
     position: relative;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
     text-align: center;
     font-size: 46px;
 }
