@@ -1,7 +1,6 @@
-import uuid, re, datetime, math
+import uuid, re, math
 from bs4 import BeautifulSoup
-from flask import Flask, render_template, request, redirect, url_for, flash, session
-from flask_mysqldb import MySQL
+from flask import Flask, render_template, request, redirect, url_for
 from mysql.connector import connect
 
 app = Flask(__name__)
@@ -165,12 +164,26 @@ def signup():
     if request.method == 'POST':
         email = request.form['email-address']
         passwd = request.form['passwd']
-        conn = connect(host = 'localhost', password = '', user = 'root', database = 'main')
+        conn = connect(host='localhost', password='', user='root', database='main')
+        conn2 = connect(host='localhost', password='', user='root', database='carts')
+        cur = conn2.cursor()
         cursor = conn.cursor()
-        cursor.execute('INSERT INTO profile(Email_Address, Password) VALUES(%s, %s);', (email, passwd))
-        conn.commit()
-        conn.close()
-        return render_template('home.html')
+        cursor.execute('SELECT Email_Address FROM profile')
+        ers = cursor.fetchall()
+        if any(email in rs for rs in ers):
+            return render_template('error3.html', error_message='Account Already Registered Please Login')
+        else:
+            cursor.execute('INSERT INTO profile(Email_Address, Password) VALUES(%s, %s);', (email, passwd))
+            conn.commit()
+            cur.execute('show tables;')
+            rs = cur.fetchall()
+            if any(email in result for result in rs):
+                return render_template('error3.html', error_message='Account Already Registered Please Login')
+            else:
+                cur.execute('create table `%s`(Product varchar(255), Price float(10,2));', (email,))
+                conn2.commit()
+                return render_template('home.html', var='LOGIN', button_var='SIGN UP')
+
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -808,5 +821,53 @@ def error():
             return redirect(url_for('login'))
         if 'low_amt' in request.form:
             return redirect(url_for('purchase'))
+        if 'already_reg' in request.form:
+            return redirect(url_for('login'))
+
+@app.route('/admin', methods = ['GET', 'POST'])
+def admin():
+        
+        email = 'admin@gmail.com'
+
+        conn1 = connect(host = 'localhost', user = 'root', passwd = '', database = 'main')
+        conn2 = connect(host = 'localhost', user = 'root', passwd = '', database = 'billing_info')
+        conn3 = connect(host = 'localhost', user = 'root', passwd = '', database = 'carts')
+        conn4 = connect(host = 'localhost', user = 'root', passwd = '', database = 'revenue')
+    
+        cur1 = conn1.cursor()
+        cur2 = conn2.cursor()
+        cur3 = conn3.cursor()
+        cur4 = conn4.cursor()
+
+        cur1.execute('SELECT * FROM profile');
+        cur2.execute('SELECT * FROM billing_info');
+        cur3.execute('SELECT * FROM `%s`', (email,))
+
+        res1 = cur1.fetchall()
+        res2 = cur2.fetchall()
+        res3 = cur3.fetchall()
+
+        cur4.execute('SELECT * FROM revenue')
+        res4 = cur4.fetchall()
+
+        cur4.execute('SELECT SUM(`Product Price`) FROM revenue')
+        totalres = cur4.fetchall()[0][0]
+
+        vat = int(totalres) * 13/100
+        Service_Tax = int(totalres) * 10/100
+
+        netres = int(totalres) - (vat + Service_Tax)
+
+        if request.method == 'GET':
+            return render_template('admin_login.html')
+        if request.method == 'POST':
+
+            admin_usr = request.form['adminuser']
+            admin_pass = request.form['adminpass']
+
+            if admin_usr == 'admin' and admin_pass == 'admin': 
+                return render_template('admin.html', account_data = res1, billing_data = res2, revenue = res4, net = netres)
+            else:
+                return render_template('admin_login.html')
 
 app.run(host='0.0.0.0', port=8080, debug=True)
