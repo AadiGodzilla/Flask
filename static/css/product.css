@@ -126,6 +126,14 @@ button:hover {
     padding-left: 15px;
     padding-right: 15px;
     left: 1%;
+    margin-right: 1%;
+    float: right;
+    border: none;
+    border-top-left-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
     background-color: rgb(0, 45, 128);
 }
 

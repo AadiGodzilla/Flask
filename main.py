@@ -206,7 +206,6 @@ def login():
             var = 'PROFILE'
             return redirect(url_for('home'))
         else:
-            flash('Incorrect Email or Password')
             return render_template('login.html'), email
 
 
