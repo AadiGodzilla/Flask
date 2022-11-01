@@ -68,17 +68,18 @@
     position: relative;
     top: 9%;
     width: 30%;
-    height: 100%;
+    height: 70%;
 }
 
 img {
     width: 100%;
+    height: 100%;
 }
 
 .section1 {
     position: relative;
-    top: -60%;
-    transform: translateY(-50%);
+    top: -50%;
+    transform: translateY(10%);
     width: 20%;
     left: 33%;
 }
@@ -86,10 +87,9 @@ img {
 .section2 {
     position: relative;
     margin-left: calc(60%);
-    top: -100%;
+    top: -65%;
     width: 35%;
-    transform: translateY(-35%);
-    background-color: white;
+    transform: translateY(-50%);
 }
 
 .header1 {
@@ -165,7 +165,7 @@ img {
 .section2 ul li {
     font-size: 20px;
     margin-bottom: 5px;
-    max-height: 85%;
+    height: 85%;
     max-width: 100%;
 }
 
@@ -191,12 +191,12 @@ h3 {
 @media (min-width: 1366px) and (min-height: 768px) {
     .section1 {
         top: -60%;
-        transform: translateY(-50%);
+        transform: translateY(50%);
     }
 
     .section2 {
         margin-left: 57.5%;
-        top: -75%;
+        top: -55%;
         transform: translateY(-60%);
     }
 

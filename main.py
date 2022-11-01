@@ -13,6 +13,37 @@ var = None
 email = None
 total = 0
 
+mainconn = connect(host = 'localhost', user = 'root', password = '')
+maincur = mainconn.cursor()
+
+maincur1 = mainconn.cursor()
+maincur2 = mainconn.cursor()
+maincur3 = mainconn.cursor()
+maincur4 = mainconn.cursor()
+
+maincur.execute('CREATE DATABASE IF NOT EXISTS main')
+maincur.execute('CREATE DATABASE IF NOT EXISTS carts')
+maincur.execute('CREATE DATABASE IF NOT EXISTS billing_info')
+maincur.execute('CREATE DATABASE IF NOT EXISTS revenue')
+mainconn.commit()
+
+maincur1.execute('USE main')
+maincur1.execute('create table IF NOT EXISTS profile(Email_Address varchar(255), Password varchar(255));')
+mainconn.commit()
+
+maincur2.execute('USE carts')
+maincur2.execute("create table IF NOT EXISTS `'admin@gmail.com'`(Product varchar(255), Price float(10,2))")
+mainconn.commit()
+
+maincur3.execute('USE billing_info')
+maincur3.execute('create table IF NOT EXISTS billing_info(First_Name varchar(255), Last_Name varchar(255), Email_Address varchar(255), Address varchar(255), City varchar(255), Zip_Code int, Name_On_Card varchar(255), Credit_Card_Number bigint, Expire_Date date);')
+mainconn.commit()
+
+maincur3.execute('USE revenue')
+maincur3.execute("create table IF NOT EXISTS revenue (`Product Purchased` varchar(255), `Customer's Email Address` varchar(255), `Product Price` int);")
+mainconn.commit()
+
+mainconn.close()
 
 @app.route('/')
 def home():
