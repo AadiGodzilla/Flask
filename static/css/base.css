@@ -87,9 +87,8 @@ img {
 .section2 {
     position: relative;
     margin-left: calc(60%);
-    top: -65%;
+    top: -97%;
     width: 35%;
-    transform: translateY(-50%);
 }
 
 .header1 {
