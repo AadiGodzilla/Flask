@@ -67,122 +67,122 @@ def products(itemname):
         if var == 'PROFILE':
             return render_template('products/item1.html', var='PROFILE')
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item2':
         if var == "PROFILE":
             return render_template('products/item2.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item3':
         if var == "PROFILE":
             return render_template('products/item3.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item4':
         if var == "PROFILE":
             return render_template('products/item4.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item5':
         if var == "PROFILE":
             return render_template('products/item5.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item6':
         if var == "PROFILE":
             return render_template('products/item6.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item7':
         if var == "PROFILE":
             return render_template('products/item7.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item8':
         if var == "PROFILE":
             return render_template('products/item8.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item9':
         if var == "PROFILE":
             return render_template('products/item9.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item10':
         if var == "PROFILE":
             return render_template('products/item10.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item11':
         if var == "PROFILE":
             return render_template('products/item11.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item12':
         if var == "PROFILE":
             return render_template('products/item12.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item13':
         if var == "PROFILE":
             return render_template('products/item13.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item14':
         if var == "PROFILE":
             return render_template('products/item14.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item15':
         if var == "PROFILE":
             return render_template('products/item15.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item16':
         if var == "PROFILE":
             return render_template('products/item16.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item17':
         if var == "PROFILE":
             return render_template('products/item17.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item18':
         if var == "PROFILE":
             return render_template('products/item18.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item19':
         if var == "PROFILE":
             return render_template('products/item19.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item20':
         if var == "PROFILE":
             return render_template('products/item20.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item21':
         if var == "PROFILE":
             return render_template('products/item21.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item22':
         if var == "PROFILE":
             return render_template('products/item22.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item23':
         if var == "PROFILE":
             return render_template('products/item23.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item24':
         if var == "PROFILE":
             return render_template('products/item24.html', var="PROFILE")
         else:
-            return render_template('error.html', error_message='Please Login or Create an Account')
+            return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
 
 
 @app.route('/signup', methods=['POST', 'GET'])
