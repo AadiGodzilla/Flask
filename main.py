@@ -1,4 +1,3 @@
-from typing import Type
 import uuid, re, math
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, redirect, url_for
