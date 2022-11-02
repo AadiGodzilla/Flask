@@ -1,3 +1,4 @@
+from typing import Type
 import uuid, re, math
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, redirect, url_for
@@ -233,11 +234,14 @@ def login():
         rv = cur.fetchone()
         cur.execute('SELECT Password FROM profile WHERE Email_Address = %s;', (email,))
         rvp = cur.fetchone()
-        if rv[0] == email and rvp[0] == passwd:
-            var = 'PROFILE'
-            return redirect(url_for('home'))
-        else:
-            return render_template('login.html'), email
+        try:
+            if rv[0] == email and rvp[0] == passwd:
+                var = 'PROFILE'
+                return redirect(url_for('home'))
+            else:
+                return render_template('login.html'), email
+        except TypeError:
+            return render_template('error4.html', error_message = 'Account not registered')
 
 
 @app.route('/profile', methods=['POST', 'GET'])
@@ -272,80 +276,55 @@ def profile():
 def cart():
     global email, var, total, proname
 
-    file1 = open('templates/products/item1.html')
-    file2 = open('templates/products/item2.html')
-    file3 = open('templates/products/item3.html')
-    file4 = open('templates/products/item4.html')
-    file5 = open('templates/products/item5.html')
-    file6 = open('templates/products/item6.html')
-    file7 = open('templates/products/item7.html')
-    file8 = open('templates/products/item8.html')
-    file9 = open('templates/products/item9.html')
-    file10 = open('templates/products/item10.html')
-    file11 = open('templates/products/item11.html')
-    file12 = open('templates/products/item12.html')
-    file13 = open('templates/products/item13.html')
-    file14 = open('templates/products/item14.html')
-    file15 = open('templates/products/item15.html')
-    file16 = open('templates/products/item16.html')
-    file17 = open('templates/products/item17.html')
-    file18 = open('templates/products/item18.html')
-    file19 = open('templates/products/item19.html')
-    file20 = open('templates/products/item20.html')
-    file21 = open('templates/products/item21.html')
-    file22 = open('templates/products/item22.html')
-    file23 = open('templates/products/item23.html')
-    file24 = open('templates/products/item24.html')
+    file1 = open('templates/products/item1.html').read()
+    file2 = open('templates/products/item2.html').read()
+    file3 = open('templates/products/item3.html').read()
+    file4 = open('templates/products/item4.html').read()
+    file5 = open('templates/products/item5.html').read()
+    file6 = open('templates/products/item6.html').read()
+    file7 = open('templates/products/item7.html').read()
+    file8 = open('templates/products/item8.html').read()
+    file9 = open('templates/products/item9.html').read()
+    file10 = open('templates/products/item10.html').read()
+    file11 = open('templates/products/item11.html').read()
+    file12 = open('templates/products/item12.html').read()
+    file13 = open('templates/products/item13.html').read()
+    file14 = open('templates/products/item14.html').read()
+    file15 = open('templates/products/item15.html').read()
+    file16 = open('templates/products/item16.html').read()
+    file17 = open('templates/products/item17.html').read()
+    file18 = open('templates/products/item18.html').read()
+    file19 = open('templates/products/item19.html').read()
+    file20 = open('templates/products/item20.html').read()
+    file21 = open('templates/products/item21.html').read()
+    file22 = open('templates/products/item22.html').read()
+    file23 = open('templates/products/item23.html').read()
+    file24 = open('templates/products/item24.html').read()
 
-    content1 = file1.read()
-    content2 = file2.read()
-    content3 = file3.read()
-    content4 = file4.read()
-    content5 = file5.read()
-    content6 = file6.read()
-    content7 = file7.read()
-    content8 = file8.read()
-    content9 = file9.read()
-    content10 = file10.read()
-    content11 = file11.read()
-    content12 = file12.read()
-    content13 = file13.read()
-    content14 = file14.read()
-    content15 = file15.read()
-    content16 = file16.read()
-    content17 = file17.read()
-    content18 = file18.read()
-    content19 = file19.read()
-    content20 = file20.read()
-    content21 = file21.read()
-    content22 = file22.read()
-    content23 = file23.read()
-    content24 = file24.read()
-
-    soup1 = BeautifulSoup(content1, 'lxml')
-    soup2 = BeautifulSoup(content2, 'lxml')
-    soup3 = BeautifulSoup(content3, 'lxml')
-    soup4 = BeautifulSoup(content4, 'lxml')
-    soup5 = BeautifulSoup(content5, 'lxml')
-    soup6 = BeautifulSoup(content6, 'lxml')
-    soup7 = BeautifulSoup(content7, 'lxml')
-    soup8 = BeautifulSoup(content8, 'lxml')
-    soup9 = BeautifulSoup(content9, 'lxml')
-    soup10 = BeautifulSoup(content10, 'lxml')
-    soup11 = BeautifulSoup(content11, 'lxml')
-    soup12 = BeautifulSoup(content12, 'lxml')
-    soup13 = BeautifulSoup(content13, 'lxml')
-    soup14 = BeautifulSoup(content14, 'lxml')
-    soup15 = BeautifulSoup(content15, 'lxml')
-    soup16 = BeautifulSoup(content16, 'lxml')
-    soup17 = BeautifulSoup(content17, 'lxml')
-    soup18 = BeautifulSoup(content18, 'lxml')
-    soup19 = BeautifulSoup(content19, 'lxml')
-    soup20 = BeautifulSoup(content20, 'lxml')
-    soup21 = BeautifulSoup(content21, 'lxml')
-    soup22 = BeautifulSoup(content22, 'lxml')
-    soup23 = BeautifulSoup(content23, 'lxml')
-    soup24 = BeautifulSoup(content24, 'lxml')
+    soup1 = BeautifulSoup(file1, 'lxml')
+    soup2 = BeautifulSoup(file2, 'lxml')
+    soup3 = BeautifulSoup(file3, 'lxml')
+    soup4 = BeautifulSoup(file4, 'lxml')
+    soup5 = BeautifulSoup(file5, 'lxml')
+    soup6 = BeautifulSoup(file6, 'lxml')
+    soup7 = BeautifulSoup(file7, 'lxml')
+    soup8 = BeautifulSoup(file8, 'lxml')
+    soup9 = BeautifulSoup(file9, 'lxml')
+    soup10 = BeautifulSoup(file10, 'lxml')
+    soup11 = BeautifulSoup(file11, 'lxml')
+    soup12 = BeautifulSoup(file12, 'lxml')
+    soup13 = BeautifulSoup(file13, 'lxml')
+    soup14 = BeautifulSoup(file14, 'lxml')
+    soup15 = BeautifulSoup(file15, 'lxml')
+    soup16 = BeautifulSoup(file16, 'lxml')
+    soup17 = BeautifulSoup(file17, 'lxml')
+    soup18 = BeautifulSoup(file18, 'lxml')
+    soup19 = BeautifulSoup(file19, 'lxml')
+    soup20 = BeautifulSoup(file20, 'lxml')
+    soup21 = BeautifulSoup(file21, 'lxml')
+    soup22 = BeautifulSoup(file22, 'lxml')
+    soup23 = BeautifulSoup(file23, 'lxml')
+    soup24 = BeautifulSoup(file24, 'lxml')
 
     productname1 = soup1.find('div', {'class': "header1"}).text
     productname2 = soup2.find('div', {'class': 'header1'}).text
@@ -372,55 +351,30 @@ def cart():
     productname23 = soup23.find('div', {'class': 'header1'}).text
     productname24 = soup24.find('div', {'class': 'header1'}).text
 
-    price1 = soup1.find('div', class_='header2').text
-    price2 = soup2.find('div', class_='header2').text
-    price3 = soup3.find('div', class_='header2').text
-    price4 = soup4.find('div', class_='header2').text
-    price5 = soup5.find('div', class_='header2').text
-    price6 = soup6.find('div', class_='header2').text
-    price7 = soup7.find('div', class_='header2').text
-    price8 = soup8.find('div', class_='header2').text
-    price9 = soup9.find('div', class_='header2').text
-    price10 = soup10.find('div', class_='header2').text
-    price11 = soup11.find('div', class_='header2').text
-    price12 = soup12.find('div', class_='header2').text
-    price13 = soup13.find('div', class_='header2').text
-    price14 = soup14.find('div', class_='header2').text
-    price15 = soup15.find('div', class_='header2').text
-    price16 = soup16.find('div', class_='header2').text
-    price17 = soup17.find('div', class_='header2').text
-    price18 = soup18.find('div', class_='header2').text
-    price19 = soup19.find('div', class_='header2').text
-    price20 = soup20.find('div', class_='header2').text
-    price21 = soup21.find('div', class_='header2').text
-    price22 = soup22.find('div', class_='header2').text
-    price23 = soup23.find('div', class_='header2').text
-    price24 = soup24.find('div', class_='header2').text
-
-    price_amt1 = float(re.search('[0.00-9.99]+', price1).group(0))
-    price_amt2 = float(re.search('[0.00-9.99]+', price2).group(0))
-    price_amt3 = float(re.search('[0.00-9.99]+', price3).group(0))
-    price_amt4 = float(re.search('[0.00-9.99]+', price4).group(0))
-    price_amt5 = float(re.search('[0.00-9.99]+', price5).group(0))
-    price_amt6 = float(re.search('[0.00-9.99]+', price6).group(0))
-    price_amt7 = float(re.search('[0.00-9.99]+', price7).group(0))
-    price_amt8 = float(re.search('[0.00-9.99]+', price8).group(0))
-    price_amt9 = float(re.search('[0.00-9.99]+', price9).group(0))
-    price_amt10 = float(re.search('[0.00-9.99]+', price10).group(0))
-    price_amt11 = float(re.search('[0.00-9.99]+', price11).group(0))
-    price_amt12 = float(re.search('[0.00-9.99]+', price12).group(0))
-    price_amt13 = float(re.search('[0.00-9.99]+', price13).group(0))
-    price_amt14 = float(re.search('[0.00-9.99]+', price14).group(0))
-    price_amt15 = float(re.search('[0.00-9.99]+', price15).group(0))
-    price_amt16 = float(re.search('[0.00-9.99]+', price16).group(0))
-    price_amt17 = float(re.search('[0.00-9.99]+', price17).group(0))
-    price_amt18 = float(re.search('[0.00-9.99]+', price18).group(0))
-    price_amt19 = float(re.search('[0.00-9.99]+', price19).group(0))
-    price_amt20 = float(re.search('[0.00-9.99]+', price20).group(0))
-    price_amt21 = float(re.search('[0.00-9.99]+', price21).group(0))
-    price_amt22 = float(re.search('[0.00-9.99]+', price22).group(0))
-    price_amt23 = float(re.search('[0.00-9.99]+', price23).group(0))
-    price_amt24 = float(re.search('[0.00-9.99]+', price24).group(0))
+    price_amt1 = float(re.search('[0.00-9.99]+',soup1.find('div', class_='header2').text).group(0))
+    price_amt2 = float(re.search('[0.00-9.99]+',soup2.find('div', class_='header2').text).group(0))
+    price_amt3 = float(re.search('[0.00-9.99]+',soup3.find('div', class_='header2').text).group(0))
+    price_amt4 = float(re.search('[0.00-9.99]+',soup4.find('div', class_='header2').text).group(0))
+    price_amt5 = float(re.search('[0.00-9.99]+',soup5.find('div', class_='header2').text).group(0))
+    price_amt6 = float(re.search('[0.00-9.99]+',soup6.find('div', class_='header2').text).group(0))
+    price_amt7 = float(re.search('[0.00-9.99]+',soup7.find('div', class_='header2').text).group(0))
+    price_amt8 = float(re.search('[0.00-9.99]+',soup8.find('div', class_='header2').text).group(0))
+    price_amt9 = float(re.search('[0.00-9.99]+',soup9.find('div', class_='header2').text).group(0))
+    price_amt10 = float(re.search('[0.00-9.99]+', soup10.find('div', class_='header2').text).group(0))
+    price_amt11 = float(re.search('[0.00-9.99]+', soup11.find('div', class_='header2').text).group(0))
+    price_amt12 = float(re.search('[0.00-9.99]+', soup12.find('div', class_='header2').text).group(0))
+    price_amt13 = float(re.search('[0.00-9.99]+', soup13.find('div', class_='header2').text).group(0))
+    price_amt14 = float(re.search('[0.00-9.99]+', soup14.find('div', class_='header2').text).group(0))
+    price_amt15 = float(re.search('[0.00-9.99]+', soup15.find('div', class_='header2').text).group(0))
+    price_amt16 = float(re.search('[0.00-9.99]+', soup16.find('div', class_='header2').text).group(0))
+    price_amt17 = float(re.search('[0.00-9.99]+', soup17.find('div', class_='header2').text).group(0))
+    price_amt18 = float(re.search('[0.00-9.99]+', soup18.find('div', class_='header2').text).group(0))
+    price_amt19 = float(re.search('[0.00-9.99]+', soup19.find('div', class_='header2').text).group(0))
+    price_amt20 = float(re.search('[0.00-9.99]+', soup20.find('div', class_='header2').text).group(0))
+    price_amt21 = float(re.search('[0.00-9.99]+', soup21.find('div', class_='header2').text).group(0))
+    price_amt22 = float(re.search('[0.00-9.99]+', soup22.find('div', class_='header2').text).group(0))
+    price_amt23 = float(re.search('[0.00-9.99]+', soup23.find('div', class_='header2').text).group(0))
+    price_amt24 = float(re.search('[0.00-9.99]+', soup24.find('div', class_='header2').text).group(0))
 
     conn2 = connect(host='localhost', user='root', password='', database='billing_info')
     cur2 = conn2.cursor()
@@ -853,6 +807,8 @@ def error():
             return redirect(url_for('purchase'))
         if 'already_reg' in request.form:
             return redirect(url_for('login'))
+        if 'ac_not_reg' in request.form:
+            return redirect(url_for('signup'))
 
 @app.route('/admin', methods = ['GET', 'POST'])
 def admin():
