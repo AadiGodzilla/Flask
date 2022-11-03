@@ -1,4 +1,4 @@
-import uuid, re, math
+import uuid, re, math, json, html, markupsafe
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, redirect, url_for
 from mysql.connector import connect
@@ -12,6 +12,13 @@ app.config['SECRET_KEY'] = uuid
 var = None
 email = None
 total = 0
+header1 = 0
+header2 = 0
+
+with open('static/json/about.json') as f:
+    js = json.load(f)
+
+about_list = list(js.values())
 
 mainconn = connect(host = 'localhost', user = 'root', password = '')
 maincur = mainconn.cursor()
@@ -63,124 +70,173 @@ def product():
 
 @app.route('/product/<itemname>')
 def products(itemname):
+    global header1, header2
     if itemname == 'item1':
+        header1 = 'LAPTOP1'
+        header2 = 2399.99
         if var == 'PROFILE':
-            return render_template('products/item1.html', var='PROFILE')
+            return render_template('item.html', var='PROFILE', imgsrc = '../static/images/product1.jpg', Buy = 'Buy1', addcart = 'addcart1', header1 = header1, header2 = header2, about = list(about_list[0].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item2':
+        header1 = 'LAPTOP2'
+        header2 = 1399.99
         if var == "PROFILE":
-            return render_template('products/item2.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/product2.jpg', Buy = 'Buy2', addcart = 'addcart2', header1 = header1, header2 = header2, about = list(about_list[1].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item3':
+        header1 = 'LAPTOP3'
+        header2 = 999.99
         if var == "PROFILE":
-            return render_template('products/item3.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/product3.jpg', Buy = 'Buy2', addcart = 'addcart3', header1 = header1, header2 = header2, about = list(about_list[2].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item4':
+        header1 = 'LAPTOP4'
+        header2 = 459.99
         if var == "PROFILE":
-            return render_template('products/item4.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/product4.jpg', Buy = 'Buy3', addcart = 'addcart4', header1 = header1, header2 = header2, about = list(about_list[3].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item5':
+        header1 = 'LAPTOP5'
+        header2 = 3699.99
         if var == "PROFILE":
-            return render_template('products/item5.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/product5.jpg', Buy = 'Buy4', addcart = 'addcart5', header1 = header1, header2 = header2, about = list(about_list[4].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item6':
+        header1 = 'LAPTOP6'
+        header2 = 1299.99
         if var == "PROFILE":
-            return render_template('products/item6.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/product6.jpg', Buy = 'Buy5', addcart = 'addcart6', header1 = header1, header2 = header2, about = list(about_list[5].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item7':
+        header1 = 'LAPTOP7'
+        header2 = 1899.99
         if var == "PROFILE":
-            return render_template('products/item7.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/product7.jpg', Buy = 'Buy6', addcart = 'addcart7', header1 = header1, header2 = header2, about = list(about_list[6].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item8':
+        header1 = 'LAPTOP8'
+        header2 = 2999.99
         if var == "PROFILE":
-            return render_template('products/item8.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/product8.jpg', Buy = 'Buy7', addcart = 'addcart8', header1 = header1, header2 = header2, about = list(about_list[7].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item9':
+        header1 = 'DESKTOP1'
+        header2 = 1349.99
         if var == "PROFILE":
-            return render_template('products/item9.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/cpu1.jpg', Buy = 'Buy8', addcart = 'addcart9', header1 = header1, header2 = header2, about = list(about_list[8].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item10':
+        header1 = 'DESKTOP2'
+        header2 = 1239.99
         if var == "PROFILE":
-            return render_template('products/item10.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/cpu2.jpg', Buy = 'Buy10', addcart = 'addcart10', header1 = header1, header2 = header2, about = list(about_list[9].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item11':
+        header1 = 'DESKTOP3'
+        header2 = 649.99
         if var == "PROFILE":
-            return render_template('products/item11.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/cpu3.jpg', Buy = 'Buy11', addcart = 'addcart11', header1 = header1, header2 = header2, about = list(about_list[10].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item12':
+        header1 = 'DESKTOP4'
+        header2 = 1799.99
         if var == "PROFILE":
-            return render_template('products/item12.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/cpu4.jpg', Buy = 'Buy12', addcart = 'addcart12', header1 = header1, header2 = header2, about = list(about_list[11].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item13':
+        header1 = 'DESKTOP5'
+        header2 = 199.99
         if var == "PROFILE":
-            return render_template('products/item13.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/cpu5.jpg', Buy = 'Buy13', addcart = 'addcart13', header1 = header1, header2 = header2, about = list(about_list[12].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item14':
+        header1 = 'DESKTOP6'
+        header2 = 899.99
         if var == "PROFILE":
-            return render_template('products/item14.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/cpu6.jpg', Buy = 'Buy14', addcart = 'addcart14', header1 = header1, header2 = header2, about = list(about_list[13].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item15':
+        header1 = 'DESKTOP7'
+        header2 = 249.99
         if var == "PROFILE":
-            return render_template('products/item15.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/cpu7.jpg', Buy = 'Buy15', addcart = 'addcart15', header1 = header1, header2 = header2, about = list(about_list[14].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item16':
+        header1 = 'DESKTOP8'
+        header2 = 619.99
         if var == "PROFILE":
-            return render_template('products/item16.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/cpu8.jpg', Buy = 'Buy16', addcart = 'addcart16', header1 = header1, header2 = header2, about = list(about_list[15].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item17':
+        header1 = 'MISC1'
+        header2 = 34.99
         if var == "PROFILE":
-            return render_template('products/item17.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/per1.jpg', Buy = 'Buy17', addcart = 'addcart17', header1 = header1, header2 = header2, about = list(about_list[16].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item18':
+        header1 = 'MISC2'
+        header2 = 39.99
         if var == "PROFILE":
-            return render_template('products/item18.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/per2.jpg', Buy = 'Buy18', addcart = 'addcart18', header1 = header1, header2 = header2, about = list(about_list[17].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item19':
+        header1 = 'MISC3'
+        header2 = 119.99
         if var == "PROFILE":
-            return render_template('products/item19.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/per3.jpg', Buy = 'Buy19', addcart = 'addcart19', header1 = header1, header2 = header2, about = list(about_list[18].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item20':
+        header1 = 'MISC4'
+        header2 = 179.99
         if var == "PROFILE":
-            return render_template('products/item20.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/per4.jpg', Buy = 'Buy20', addcart = 'addcart20', header1 = header1, header2 = header2, about = list(about_list[19].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item21':
+        header1 = 'MISC5'
+        header2 = 349.99
         if var == "PROFILE":
-            return render_template('products/item21.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/per5.jpg', Buy = 'Buy21', addcart = 'addcart21', header1 = header1, header2 = header2, about = list(about_list[20].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item22':
+        header1 = 'MISC6'
+        header2 = 79.99
         if var == "PROFILE":
-            return render_template('products/item22.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/per6.jpg', Buy = 'Buy22', addcart = 'addcart22', header1 = header1, header2 = header2, about = list(about_list[21].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item23':
+        header1 = 'MISC7'
+        header2 = 99.99
         if var == "PROFILE":
-            return render_template('products/item23.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/per7.jpg', Buy = 'Buy23', addcart = 'addcart23', header1 = header1, header2 = header2, about = list(about_list[22].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
     if itemname == 'item24':
+        header1 = 'MISC8'
+        header2 = 43.99
         if var == "PROFILE":
-            return render_template('products/item24.html', var="PROFILE")
+            return render_template('item.html', var="PROFILE", imgsrc = '../static/images/per8.jpg', Buy = 'Buy24', addcart = 'addcart24', header1 = header1, header2 = header2, about = list(about_list[23].values()))
         else:
             return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
 
@@ -376,7 +432,9 @@ def cart():
     price_amt24 = float(re.search('[0.00-9.99]+', soup24.find('div', class_='header2').text).group(0))
 
     conn2 = connect(host='localhost', user='root', password='', database='billing_info')
+    conn3 = connect(host='localhost', user='root', password='', database='carts')
     cur2 = conn2.cursor()
+    cur3 = conn3.cursor()
 
     if request.method == 'POST':
         conn = connect(host='localhost', user='root', password='', database='carts')
@@ -481,6 +539,8 @@ def cart():
         elif 'Buy1' in request.form:
             proname = productname1
             total = int(math.ceil(2399.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -490,6 +550,8 @@ def cart():
         elif 'Buy2' in request.form:
             proname = productname2
             total = int(math.ceil(1399.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -499,6 +561,8 @@ def cart():
         elif 'Buy3' in request.form:
             proname = productname3
             total = int(math.ceil(999.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -508,6 +572,8 @@ def cart():
         elif 'Buy4' in request.form:
             proname = productname4
             total = int(math.ceil(459.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -517,6 +583,8 @@ def cart():
         elif 'Buy5' in request.form:
             proname = productname5
             total = int(math.ceil(3699.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -526,6 +594,8 @@ def cart():
         elif 'Buy6' in request.form:
             proname = productname6
             total = int(math.ceil(1299.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -535,6 +605,8 @@ def cart():
         elif 'Buy7' in request.form:
             proname = productname7
             total = int(math.ceil(1899.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -544,6 +616,8 @@ def cart():
         elif 'Buy8' in request.form:
             proname = productname8
             total = int(math.ceil(2999.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -553,6 +627,8 @@ def cart():
         elif 'Buy9' in request.form:
             proname = productname9
             total = int(math.ceil(1349.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -562,6 +638,8 @@ def cart():
         elif 'Buy10' in request.form:
             proname = productname10
             total = int(math.ceil(1239.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -571,6 +649,8 @@ def cart():
         elif 'Buy11' in request.form:
             proname = productname11
             total = int(math.ceil(649.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -580,6 +660,8 @@ def cart():
         elif 'Buy12' in request.form:
             proname = productname12
             total = int(math.ceil(1799.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -589,6 +671,8 @@ def cart():
         elif 'Buy13' in request.form:
             proname = productname13
             total = int(math.ceil(199.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -598,6 +682,8 @@ def cart():
         elif 'Buy14' in request.form:
             proname = productname14
             total = int(math.ceil(899.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -607,6 +693,8 @@ def cart():
         elif 'Buy15' in request.form:
             proname = productname15
             total = int(math.ceil(249.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -616,6 +704,8 @@ def cart():
         elif 'Buy16' in request.form:
             proname = productname16
             total = int(math.ceil(619.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -625,6 +715,8 @@ def cart():
         elif 'Buy17' in request.form:
             proname = productname17
             total = int(math.ceil(34.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -634,6 +726,8 @@ def cart():
         elif 'Buy18' in request.form:
             proname = productname18
             total = int(math.ceil(39.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -643,6 +737,8 @@ def cart():
         elif 'Buy19' in request.form:
             proname = productname19
             total = int(math.ceil(119.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -652,6 +748,8 @@ def cart():
         elif 'Buy20' in request.form:
             proname = productname20
             total = int(math.ceil(179.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -661,6 +759,8 @@ def cart():
         elif 'Buy21' in request.form:
             proname = productname21
             total = int(math.ceil(349.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -670,6 +770,8 @@ def cart():
         elif 'Buy22' in request.form:
             proname = productname22
             total = int(math.ceil(79.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -679,6 +781,8 @@ def cart():
         elif 'Buy23' in request.form:
             proname = productname23
             total = int(math.ceil(99.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):
@@ -688,6 +792,8 @@ def cart():
         elif 'Buy24' in request.form:
             proname = productname24
             total = int(math.ceil(43.99))
+            cur3.execute('DELETE FROM `%s`', (email,))
+            conn3.commit()
             cur2.execute('SELECT Email_Address FROM billing_info')
             ers = cur2.fetchall()
             if any(email in i for i in ers):

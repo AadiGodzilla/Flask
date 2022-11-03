@@ -87,7 +87,7 @@ img {
 .section2 {
     position: relative;
     margin-left: calc(60%);
-    top: -97%;
+    top: -99%;
     width: 35%;
 }
 
@@ -195,7 +195,7 @@ h3 {
 
     .section2 {
         margin-left: 57.5%;
-        top: -55%;
+        top: -52%;
         transform: translateY(-60%);
     }
 
