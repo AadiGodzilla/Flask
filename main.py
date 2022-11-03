@@ -1,4 +1,4 @@
-import uuid, re, math, json, html, markupsafe
+import uuid, re, math, json
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, redirect, url_for
 from mysql.connector import connect
