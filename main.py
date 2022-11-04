@@ -291,7 +291,7 @@ def login():
         try:
             if rv[0] == email and rvp[0] == passwd:
                 var = 'PROFILE'
-                return redirect(url_for('home'))
+                return redirect(url_for('product'))
             else:
                 return render_template('login.html'), email
         except TypeError:
@@ -837,7 +837,6 @@ def admin():
 
         res1 = cur1.fetchall()
         res2 = cur2.fetchall()
-        res3 = cur3.fetchall()
 
         cur4.execute('SELECT * FROM revenue')
         res4 = cur4.fetchall()
