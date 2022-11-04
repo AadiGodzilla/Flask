@@ -59,7 +59,6 @@ def home():
     else:
         return render_template('home.html', var='LOGIN', button_var='SIGN UP')
 
-
 @app.route('/product/')
 def product():
     if var == 'PROFILE':
