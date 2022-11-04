@@ -20,7 +20,7 @@ with open('static/json/about.json') as f:
 
 about_list = list(js.values())
 
-mainconn = connect(host = 'localhost', user = 'root', password = '')
+mainconn = connect(host = 'localhost', user = 'root', password = 'aadi')
 maincur = mainconn.cursor()
 
 maincur1 = mainconn.cursor()
@@ -75,170 +75,170 @@ def products(itemname):
         header1 = 'LAPTOP1'
         header2 = 2399.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product1.jpg', Buy = 'Buy1', addcart = 'addcart1', header1 = header1, header2 = header2, about = list(about_list[0].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product1.jpg', Buy = 'Buy1', addcart = 'addcart1', header1 = header1, header2 = header2, about = list(about_list[0].values())[0])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product1.jpg', Buy = 'Buy1', addcart = 'addcart1', header1 = header1, header2 = header2, about = list(about_list[0].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product1.jpg', Buy = 'Buy1', addcart = 'addcart1', header1 = header1, header2 = header2, about = list(about_list[0].values())[0])
     if itemname == 'item2':
         header1 = 'LAPTOP2'
         header2 = 1399.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product2.jpg', Buy = 'Buy2', addcart = 'addcart2', header1 = header1, header2 = header2, about = list(about_list[1].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product2.jpg', Buy = 'Buy2', addcart = 'addcart2', header1 = header1, header2 = header2, about = list(about_list[0].values())[1])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product2.jpg', Buy = 'Buy2', addcart = 'addcart2', header1 = header1, header2 = header2, about = list(about_list[1].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product2.jpg', Buy = 'Buy2', addcart = 'addcart2', header1 = header1, header2 = header2, about = list(about_list[0].values())[1])
     if itemname == 'item3':
         header1 = 'LAPTOP3'
         header2 = 999.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product3.jpg', Buy = 'Buy3', addcart = 'addcart3', header1 = header1, header2 = header2, about = list(about_list[2].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product3.jpg', Buy = 'Buy3', addcart = 'addcart3', header1 = header1, header2 = header2, about = list(about_list[0].values())[2])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product3.jpg', Buy = 'Buy3', addcart = 'addcart3', header1 = header1, header2 = header2, about = list(about_list[2].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product3.jpg', Buy = 'Buy3', addcart = 'addcart3', header1 = header1, header2 = header2, about = list(about_list[0].values())[2])
     if itemname == 'item4':
         header1 = 'LAPTOP4'
         header2 = 459.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product4.jpg', Buy = 'Buy4', addcart = 'addcart4', header1 = header1, header2 = header2, about = list(about_list[3].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product4.jpg', Buy = 'Buy4', addcart = 'addcart4', header1 = header1, header2 = header2, about = list(about_list[0].values())[3])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product4.jpg', Buy = 'Buy4', addcart = 'addcart4', header1 = header1, header2 = header2, about = list(about_list[3].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product4.jpg', Buy = 'Buy4', addcart = 'addcart4', header1 = header1, header2 = header2, about = list(about_list[0].values())[3])
     if itemname == 'item5':
         header1 = 'LAPTOP5'
         header2 = 3699.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product5.jpg', Buy = 'Buy5', addcart = 'addcart5', header1 = header1, header2 = header2, about = list(about_list[4].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product5.jpg', Buy = 'Buy5', addcart = 'addcart5', header1 = header1, header2 = header2, about = list(about_list[0].values())[4])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product5.jpg', Buy = 'Buy5', addcart = 'addcart5', header1 = header1, header2 = header2, about = list(about_list[4].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product5.jpg', Buy = 'Buy5', addcart = 'addcart5', header1 = header1, header2 = header2, about = list(about_list[0].values())[4])
     if itemname == 'item6':
         header1 = 'LAPTOP6'
         header2 = 1299.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product6.jpg', Buy = 'Buy6', addcart = 'addcart6', header1 = header1, header2 = header2, about = list(about_list[5].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product6.jpg', Buy = 'Buy6', addcart = 'addcart6', header1 = header1, header2 = header2, about = list(about_list[0].values())[5])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product6.jpg', Buy = 'Buy6', addcart = 'addcart6', header1 = header1, header2 = header2, about = list(about_list[5].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product6.jpg', Buy = 'Buy6', addcart = 'addcart6', header1 = header1, header2 = header2, about = list(about_list[0].values())[5])
     if itemname == 'item7':
         header1 = 'LAPTOP7'
         header2 = 1899.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product7.jpg', Buy = 'Buy7', addcart = 'addcart7', header1 = header1, header2 = header2, about = list(about_list[6].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product7.jpg', Buy = 'Buy7', addcart = 'addcart7', header1 = header1, header2 = header2, about = list(about_list[0].values())[6])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product7.jpg', Buy = 'Buy7', addcart = 'addcart7', header1 = header1, header2 = header2, about = list(about_list[6].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product7.jpg', Buy = 'Buy7', addcart = 'addcart7', header1 = header1, header2 = header2, about = list(about_list[0].values())[6])
     if itemname == 'item8':
         header1 = 'LAPTOP8'
         header2 = 2999.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product8.jpg', Buy = 'Buy8', addcart = 'addcart8', header1 = header1, header2 = header2, about = list(about_list[7].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product8.jpg', Buy = 'Buy8', addcart = 'addcart8', header1 = header1, header2 = header2, about = list(about_list[0].values())[7])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product8.jpg', Buy = 'Buy8', addcart = 'addcart8', header1 = header1, header2 = header2, about = list(about_list[7].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product8.jpg', Buy = 'Buy8', addcart = 'addcart8', header1 = header1, header2 = header2, about = list(about_list[0].values())[7])
     if itemname == 'item9':
         header1 = 'DESKTOP1'
         header2 = 1349.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu1.jpg', Buy = 'Buy9', addcart = 'addcart9', header1 = header1, header2 = header2, about = list(about_list[8].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu1.jpg', Buy = 'Buy9', addcart = 'addcart9', header1 = header1, header2 = header2, about = list(about_list[0].values())[8])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu1.jpg', Buy = 'Buy9', addcart = 'addcart9', header1 = header1, header2 = header2, about = list(about_list[8].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu1.jpg', Buy = 'Buy9', addcart = 'addcart9', header1 = header1, header2 = header2, about = list(about_list[0].values())[8])
     if itemname == 'item10':
         header1 = 'DESKTOP2'
         header2 = 1239.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu2.jpg', Buy = 'Buy10', addcart = 'addcart10', header1 = header1, header2 = header2, about = list(about_list[9].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu2.jpg', Buy = 'Buy10', addcart = 'addcart10', header1 = header1, header2 = header2, about = list(about_list[0].values())[9])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu2.jpg', Buy = 'Buy10', addcart = 'addcart10', header1 = header1, header2 = header2, about = list(about_list[9].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu2.jpg', Buy = 'Buy10', addcart = 'addcart10', header1 = header1, header2 = header2, about = list(about_list[0].values())[9])
     if itemname == 'item11':
         header1 = 'DESKTOP3'
         header2 = 649.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu3.jpg', Buy = 'Buy11', addcart = 'addcart11', header1 = header1, header2 = header2, about = list(about_list[10].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu3.jpg', Buy = 'Buy11', addcart = 'addcart11', header1 = header1, header2 = header2, about = list(about_list[0].values())[10])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu3.jpg', Buy = 'Buy11', addcart = 'addcart11', header1 = header1, header2 = header2, about = list(about_list[10].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu3.jpg', Buy = 'Buy11', addcart = 'addcart11', header1 = header1, header2 = header2, about = list(about_list[0].values())[10])
     if itemname == 'item12':
         header1 = 'DESKTOP4'
         header2 = 1799.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu4.jpg', Buy = 'Buy12', addcart = 'addcart12', header1 = header1, header2 = header2, about = list(about_list[11].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu4.jpg', Buy = 'Buy12', addcart = 'addcart12', header1 = header1, header2 = header2, about = list(about_list[0].values())[11])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu4.jpg', Buy = 'Buy12', addcart = 'addcart12', header1 = header1, header2 = header2, about = list(about_list[11].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu4.jpg', Buy = 'Buy12', addcart = 'addcart12', header1 = header1, header2 = header2, about = list(about_list[0].values())[11])
     if itemname == 'item13':
         header1 = 'DESKTOP5'
         header2 = 199.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu5.jpg', Buy = 'Buy13', addcart = 'addcart13', header1 = header1, header2 = header2, about = list(about_list[12].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu5.jpg', Buy = 'Buy13', addcart = 'addcart13', header1 = header1, header2 = header2, about = list(about_list[0].values())[12])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu5.jpg', Buy = 'Buy13', addcart = 'addcart13', header1 = header1, header2 = header2, about = list(about_list[12].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu5.jpg', Buy = 'Buy13', addcart = 'addcart13', header1 = header1, header2 = header2, about = list(about_list[0].values())[12])
     if itemname == 'item14':
         header1 = 'DESKTOP6'
         header2 = 899.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu6.jpg', Buy = 'Buy14', addcart = 'addcart14', header1 = header1, header2 = header2, about = list(about_list[13].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu6.jpg', Buy = 'Buy14', addcart = 'addcart14', header1 = header1, header2 = header2, about = list(about_list[0].values())[13])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu6.jpg', Buy = 'Buy14', addcart = 'addcart14', header1 = header1, header2 = header2, about = list(about_list[13].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu6.jpg', Buy = 'Buy14', addcart = 'addcart14', header1 = header1, header2 = header2, about = list(about_list[0].values())[13])
     if itemname == 'item15':
         header1 = 'DESKTOP7'
         header2 = 249.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu7.jpg', Buy = 'Buy15', addcart = 'addcart15', header1 = header1, header2 = header2, about = list(about_list[14].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu7.jpg', Buy = 'Buy15', addcart = 'addcart15', header1 = header1, header2 = header2, about = list(about_list[0].values())[14])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu7.jpg', Buy = 'Buy15', addcart = 'addcart15', header1 = header1, header2 = header2, about = list(about_list[14].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu7.jpg', Buy = 'Buy15', addcart = 'addcart15', header1 = header1, header2 = header2, about = list(about_list[0].values())[14])
     if itemname == 'item16':
         header1 = 'DESKTOP8'
         header2 = 619.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu8.jpg', Buy = 'Buy16', addcart = 'addcart16', header1 = header1, header2 = header2, about = list(about_list[15].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/cpu8.jpg', Buy = 'Buy16', addcart = 'addcart16', header1 = header1, header2 = header2, about = list(about_list[0].values())[15])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu8.jpg', Buy = 'Buy16', addcart = 'addcart16', header1 = header1, header2 = header2, about = list(about_list[15].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/cpu8.jpg', Buy = 'Buy16', addcart = 'addcart16', header1 = header1, header2 = header2, about = list(about_list[0].values())[15])
     if itemname == 'item17':
         header1 = 'MISC1'
         header2 = 34.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per1.jpg', Buy = 'Buy17', addcart = 'addcart17', header1 = header1, header2 = header2, about = list(about_list[16].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per1.jpg', Buy = 'Buy17', addcart = 'addcart17', header1 = header1, header2 = header2, about = list(about_list[0].values())[16])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per1.jpg', Buy = 'Buy17', addcart = 'addcart17', header1 = header1, header2 = header2, about = list(about_list[16].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per1.jpg', Buy = 'Buy17', addcart = 'addcart17', header1 = header1, header2 = header2, about = list(about_list[0].values())[16])
     if itemname == 'item18':
         header1 = 'MISC2'
         header2 = 39.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per2.jpg', Buy = 'Buy18', addcart = 'addcart18', header1 = header1, header2 = header2, about = list(about_list[17].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per2.jpg', Buy = 'Buy18', addcart = 'addcart18', header1 = header1, header2 = header2, about = list(about_list[0].values())[17])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per2.jpg', Buy = 'Buy18', addcart = 'addcart18', header1 = header1, header2 = header2, about = list(about_list[17].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per2.jpg', Buy = 'Buy18', addcart = 'addcart18', header1 = header1, header2 = header2, about = list(about_list[0].values())[17])
     if itemname == 'item19':
         header1 = 'MISC3'
         header2 = 119.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per3.jpg', Buy = 'Buy19', addcart = 'addcart19', header1 = header1, header2 = header2, about = list(about_list[18].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per3.jpg', Buy = 'Buy19', addcart = 'addcart19', header1 = header1, header2 = header2, about = list(about_list[0].values())[18])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per3.jpg', Buy = 'Buy19', addcart = 'addcart19', header1 = header1, header2 = header2, about = list(about_list[18].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per3.jpg', Buy = 'Buy19', addcart = 'addcart19', header1 = header1, header2 = header2, about = list(about_list[0].values())[18])
     if itemname == 'item20':
         header1 = 'MISC4'
         header2 = 179.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per4.jpg', Buy = 'Buy20', addcart = 'addcart20', header1 = header1, header2 = header2, about = list(about_list[19].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per4.jpg', Buy = 'Buy20', addcart = 'addcart20', header1 = header1, header2 = header2, about = list(about_list[0].values())[19])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per4.jpg', Buy = 'Buy20', addcart = 'addcart20', header1 = header1, header2 = header2, about = list(about_list[19].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per4.jpg', Buy = 'Buy20', addcart = 'addcart20', header1 = header1, header2 = header2, about = list(about_list[0].values())[19])
     if itemname == 'item21':
         header1 = 'MISC5'
         header2 = 349.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per5.jpg', Buy = 'Buy21', addcart = 'addcart21', header1 = header1, header2 = header2, about = list(about_list[20].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per5.jpg', Buy = 'Buy21', addcart = 'addcart21', header1 = header1, header2 = header2, about = list(about_list[0].values())[20])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per5.jpg', Buy = 'Buy21', addcart = 'addcart21', header1 = header1, header2 = header2, about = list(about_list[20].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per5.jpg', Buy = 'Buy21', addcart = 'addcart21', header1 = header1, header2 = header2, about = list(about_list[0].values())[20])
     if itemname == 'item22':
         header1 = 'MISC6'
         header2 = 79.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per6.jpg', Buy = 'Buy22', addcart = 'addcart22', header1 = header1, header2 = header2, about = list(about_list[21].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per6.jpg', Buy = 'Buy22', addcart = 'addcart22', header1 = header1, header2 = header2, about = list(about_list[0].values())[21])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per6.jpg', Buy = 'Buy22', addcart = 'addcart22', header1 = header1, header2 = header2, about = list(about_list[21].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per6.jpg', Buy = 'Buy22', addcart = 'addcart22', header1 = header1, header2 = header2, about = list(about_list[0].values())[21])
     if itemname == 'item23':
         header1 = 'MISC7'
         header2 = 99.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per7.jpg', Buy = 'Buy23', addcart = 'addcart23', header1 = header1, header2 = header2, about = list(about_list[22].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per7.jpg', Buy = 'Buy23', addcart = 'addcart23', header1 = header1, header2 = header2, about = list(about_list[0].values())[22])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per7.jpg', Buy = 'Buy23', addcart = 'addcart23', header1 = header1, header2 = header2, about = list(about_list[22].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per7.jpg', Buy = 'Buy23', addcart = 'addcart23', header1 = header1, header2 = header2, about = list(about_list[0].values())[22])
     if itemname == 'item24':
         header1 = 'MISC8'
         header2 = 43.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per8.jpg', Buy = 'Buy24', addcart = 'addcart24', header1 = header1, header2 = header2, about = list(about_list[23].values()))
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/per8.jpg', Buy = 'Buy24', addcart = 'addcart24', header1 = header1, header2 = header2, about = list(about_list[0].values())[23])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per8.jpg', Buy = 'Buy24', addcart = 'addcart24', header1 = header1, header2 = header2, about = list(about_list[23].values()))
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per8.jpg', Buy = 'Buy24', addcart = 'addcart24', header1 = header1, header2 = header2, about = list(about_list[0].values())[23])
 
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
@@ -250,8 +250,8 @@ def signup():
     if request.method == 'POST':
         email = request.form['email-address']
         passwd = request.form['passwd']
-        conn = connect(host='localhost', password='', user='root', database='main')
-        conn2 = connect(host='localhost', password='', user='root', database='carts')
+        conn = connect(host='localhost', password='aadi', user='root', database='main')
+        conn2 = connect(host='localhost', password='aadi', user='root', database='carts')
         cur = conn2.cursor()
         cursor = conn.cursor()
         cursor.execute('SELECT Email_Address FROM profile')
@@ -280,7 +280,7 @@ def login():
     if request.method == 'POST':
         email = request.form['email-address']
         passwd = request.form['passwd']
-        conn = connect(host='localhost', user='root', password='', database='main')
+        conn = connect(host='localhost', user='root', password='aadi', database='main')
         cur = conn.cursor()
 
         cur.execute('SELECT Email_Address FROM profile WHERE Email_Address = %s;', (email,))
@@ -305,7 +305,7 @@ def profile():
     if request.method == 'POST':
         currpass = request.form['current']
         newpass = request.form['new']
-        conn = connect(host='localhost', user='root', password='', database='main')
+        conn = connect(host='localhost', user='root', password='aadi', database='main')
         cur = conn.cursor()
         cur.execute('SELECT Password FROM profile WHERE Email_Address = %s', (email,))
         pvr = cur.fetchone()
@@ -317,7 +317,7 @@ def profile():
             return redirect(url_for('home'))
         if 'logout' in request.form:
             var = 'LOGIN'
-            conn2 = connect(host='localhost', user='root', password='', database='carts')
+            conn2 = connect(host='localhost', user='root', password='aadi', database='carts')
             cur2 = conn2.cursor()
             cur2.execute('DELETE FROM `%s`', (email,))
             conn2.commit()
@@ -327,15 +327,15 @@ def profile():
 def cart():
     global email, var, total, proname
 
-    conn2 = connect(host='localhost', user='root', password='', database='billing_info')
-    conn3 = connect(host='localhost', user='root', password='', database='carts')
+    conn2 = connect(host='localhost', user='root', password='aadi', database='billing_info')
+    conn3 = connect(host='localhost', user='root', password='aadi', database='carts')
     cur2 = conn2.cursor()
     cur3 = conn3.cursor()
 
     if request.method == 'POST':
 
         if var == 'PROFILE':
-            conn = connect(host='localhost', user='root', password='', database='carts')
+            conn = connect(host='localhost', user='root', password='aadi', database='carts')
             cur = conn.cursor()
             if 'addcart1' in request.form:
                 cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
@@ -720,7 +720,7 @@ def cart():
 def dashboard():
     global email, var, total
 
-    conn = connect(host='localhost', user='root', password='', database='carts')
+    conn = connect(host='localhost', user='root', password='aadi', database='carts')
     cur = conn.cursor()
 
     if var == 'PROFILE':
@@ -737,7 +737,7 @@ def dashboard():
 def payment():
     global email
 
-    conn = connect(host='localhost', user='root', password='', database='billing_info')
+    conn = connect(host='localhost', user='root', password='aadi', database='billing_info')
     cur = conn.cursor()
 
     cur.execute('SELECT * FROM billing_info')
@@ -775,8 +775,8 @@ def purchase():
             amt = request.form['amt']
             if total <= float(amt):
                 rem = int(amt) - total
-                conn2 = connect(host='localhost', user='root', password='', database='carts')
-                conn3 = connect(host = 'localhost', user = 'root', password = '', database = 'revenue')
+                conn2 = connect(host='localhost', user='root', password='aadi', database='carts')
+                conn3 = connect(host = 'localhost', user = 'root', password = 'aadi', database = 'revenue')
                 cur2 = conn2.cursor()
                 cur3 = conn3.cursor()
                 cur2.execute('SELECT * FROM `%s`', (email,))
@@ -820,10 +820,10 @@ def admin():
         
         email = 'admin@gmail.com'
 
-        conn1 = connect(host = 'localhost', user = 'root', passwd = '', database = 'main')
-        conn2 = connect(host = 'localhost', user = 'root', passwd = '', database = 'billing_info')
-        conn3 = connect(host = 'localhost', user = 'root', passwd = '', database = 'carts')
-        conn4 = connect(host = 'localhost', user = 'root', passwd = '', database = 'revenue')
+        conn1 = connect(host = 'localhost', user = 'root', passwd = 'aadi', database = 'main')
+        conn2 = connect(host = 'localhost', user = 'root', passwd = 'aadi', database = 'billing_info')
+        conn3 = connect(host = 'localhost', user = 'root', passwd = 'aadi', database = 'carts')
+        conn4 = connect(host = 'localhost', user = 'root', passwd = 'aadi', database = 'revenue')
     
         cur1 = conn1.cursor()
         cur2 = conn2.cursor()
@@ -856,7 +856,7 @@ def admin():
             admin_pass = request.form['adminpass']
 
             if admin_usr == 'admin' and admin_pass == 'admin': 
-                return render_template('admin.html', account_data = res1, billing_data = res2, revenue = res4, net = netres)
+                return render_template('admin.html', account_data = res1, billing_data = res2, revenue = res4, net = netres, gross = totalres)
             else:
                 return render_template('admin_login.html')
 

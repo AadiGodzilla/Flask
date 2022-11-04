@@ -1,121 +1,53 @@
 {
-    "item1" : 
+    "items" : 
     {
-        "about" : "<ul><li>Intel Core i9 12th Gen 12900H 2.5GHz Processor</li><li>NVIDIA GeForce RTX 3070 Ti 8GB GDDR6</li><li>32GB DDR5-4800 RAM</li><li>Graphics: Integrated Radeon Vega 3 Graphics</li><li>1TB Solid State Drive</li><li>Microsoft Windows 11 Pro</li><li>10/100/1000 Network</li><li>2x2 Wi-Fi 6E (802.11ax)+Bluetooth 5.2</li><li>17.3' WQHD IPS-Level Anti-Glare 240Hz Display</li></ul>"
-    },
+        "item1" : "<ul><li>Intel Core i9 12th Gen 12900H 2.5GHz Processor</li><li>NVIDIA GeForce RTX 3070 Ti 8GB GDDR6</li><li>32GB DDR5-4800 RAM</li><li>Graphics: Integrated Radeon Vega 3 Graphics</li><li>1TB Solid State Drive</li><li>Microsoft Windows 11 Pro</li><li>10/100/1000 Network</li><li>2x2 Wi-Fi 6E (802.11ax)+Bluetooth 5.2</li><li>17.3' WQHD IPS-Level Anti-Glare 240Hz Display</li></ul>",
 
-    "item2" : 
-    {
-        "about" : "<ul><li> Intel Core i5 11th Gen 1135G7 2.4GHz Processor</li><li> 12GB DDR4-3200 RAM</li><li> 256GB Solid State Drive</li><li> Intel Iris Xe Graphics</li><li> Microsoft Windows 11 Home</li><li> Multi-Format SD Media Card Reader</li><li> 1x1 802.11ac Wi-Fi+Bluetooth 4.2 Combo</li><li> 15.6' FHD IPS Micro-Edge BrightView Touch Display</li></ul>"
-    },
+        "item2" : "<ul><li> Intel Core i5 11th Gen 1135G7 2.4GHz Processor</li><li> 12GB DDR4-3200 RAM</li><li> 256GB Solid State Drive</li><li> Intel Iris Xe Graphics</li><li> Microsoft Windows 11 Home</li><li> Multi-Format SD Media Card Reader</li><li> 1x1 802.11ac Wi-Fi+Bluetooth 4.2 Combo</li><li> 15.6' FHD IPS Micro-Edge BrightView Touch Display</li></ul>",
 
-    "item3" : 
-    {
-        "about" : "<ul><li> Intel Core i7 12th Gen 1255U 1.7GHz Processor</li><li> NVIDIA GeForce MX570 2GB GDDR6</li><li> 16GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Microsoft Windows 11 Home</li><li> SD Card Reader</li><li> 2x2 Intel Wi-Fi 6E AX211+Bluetooth 5.2</li><li> 16.0' FHD+ WVA Touch Display with ComfortView Plus Support</li></ul>"
-    },
+        "item3" : "<ul><li> Intel Core i7 12th Gen 1255U 1.7GHz Processor</li><li> NVIDIA GeForce MX570 2GB GDDR6</li><li> 16GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Microsoft Windows 11 Home</li><li> SD Card Reader</li><li> 2x2 Intel Wi-Fi 6E AX211+Bluetooth 5.2</li><li> 16.0' FHD+ WVA Touch Display with ComfortView Plus Support</li></ul>",
+        
+        "item4" : "<ul><li> Intel Core i5 11th Gen 1135G7 2.4GHz Processor</li><li> 8GB RAM</li><li> 256GB Solid State Drive</li><li> Intel Iris Xe Graphics</li><li> Microsoft Windows 10 Pro</li><li> 10/100/1000 Network</li><li> 802.11ac Wireless</li><li> Bluetooth 5.0</li><li> 14' Full HD Display</li></ul>",
 
-    "item4" : 
-    {
-        "about" : "<ul><li> Intel Core i5 11th Gen 1135G7 2.4GHz Processor</li><li> 8GB RAM</li><li> 256GB Solid State Drive</li><li> Intel Iris Xe Graphics</li><li> Microsoft Windows 10 Pro</li><li> 10/100/1000 Network</li><li> 802.11ac Wireless</li><li> Bluetooth 5.0</li><li> 14' Full HD Display</li></ul>"
-    },
+        "item5" : "<ul><li> Intel Core i9 12th Gen 12950HX 2.3GHz Processor</li><li> NVIDIA GeForce RTX 3080Ti 16GB GDDR6</li><li> 64GB DDR5-4800 RAM</li><li> 2TB Solid State Drive (RAID 0)</li><li> Microsoft Windows 11 Pro</li><li> 10/100/1000 Network</li><li> 2x2 Wi-Fi 6E 802.11ax+Bluetooth 5.2</li><li> 17.3' WQHD IPS Anti-Glare 240Hz Display</li></ul>",
 
-    "item5" : 
-    {
-        "about" : "<ul><li> Intel Core i9 12th Gen 12950HX 2.3GHz Processor</li><li> NVIDIA GeForce RTX 3080Ti 16GB GDDR6</li><li> 64GB DDR5-4800 RAM</li><li> 2TB Solid State Drive (RAID 0)</li><li> Microsoft Windows 11 Pro</li><li> 10/100/1000 Network</li><li> 2x2 Wi-Fi 6E 802.11ax+Bluetooth 5.2</li><li> 17.3' WQHD IPS Anti-Glare 240Hz Display</li></ul>"
-    },
-    
-    "item6" : 
-    {
-        "about" : "<ul><li> AMD Ryzen 7 6800U 2.7GHz Processor</li><li> 16GB LPDDR5 Onboard RAM</li><li> 1TB Solid State Drive</li><li> AMD Radeon Graphics</li><li> Microsoft Windows 11 Pro</li><li> 2x2 Wi-Fi 6E 802.11ax+Bluetooth 5.2</li><li> 13.3' 2.8K OLED Touchscreen SGS Eye Care Display</li></ul>"
-    },
+        "item6" :  "<ul><li> AMD Ryzen 7 6800U 2.7GHz Processor</li><li> 16GB LPDDR5 Onboard RAM</li><li> 1TB Solid State Drive</li><li> AMD Radeon Graphics</li><li> Microsoft Windows 11 Pro</li><li> 2x2 Wi-Fi 6E 802.11ax+Bluetooth 5.2</li><li> 13.3' 2.8K OLED Touchscreen SGS Eye Care Display</li></ul>",
 
-    "item7" : 
-    {
-        "about" : "<ul><li> Intel Core i7 12th Gen 12700H 1.7GHz Processor</li><li> NVIDIA Geforce RTX 3070 Ti 8GB GDDR6</li><li> 32GB DDR5-4800 RAM</li><li> 1TB Solid State Drive</li><li> Microsoft Windows 11 Home</li><li> 2x2 802.11ax Wifi 6E</li><li> Bluetooth</li><li> 16.0' WQXGA IPS LED-backlit Anti-Glare 165Hz Display</li></ul>"
-    },
+        "item7" : "<ul><li> AMD Ryzen 7 6800U 2.7GHz Processor</li><li> 16GB LPDDR5 Onboard RAM</li><li> 1TB Solid State Drive</li><li> AMD Radeon Graphics</li><li> Microsoft Windows 11 Pro</li><li> 2x2 Wi-Fi 6E 802.11ax+Bluetooth 5.2</li><li> 13.3' 2.8K OLED Touchscreen SGS Eye Care Display</li></ul>",
 
-    "item8" : 
-    {
-        "about" : "<ul><li> Intel Core i7 12th Gen 1255U 1.7GHz Processor</li><li> NVIDIA GeForce MX570 2GB GDDR6</li><li> 16GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Microsoft Windows 11 Home</li><li> SD Card Reader</li><li> 2x2 Intel Wi-Fi 6E AX211+Bluetooth 5.2</li><li> 16.0' FHD+ WVA Touch Display with ComfortView <br> Plus Support</li></ul>"
-    },
+        "item8" : "<ul><li> Intel Core i7 12th Gen 1255U 1.7GHz Processor</li><li> NVIDIA GeForce MX570 2GB GDDR6</li><li> 16GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Microsoft Windows 11 Home</li><li> SD Card Reader</li><li> 2x2 Intel Wi-Fi 6E AX211+Bluetooth 5.2</li><li> 16.0' FHD+ WVA Touch Display with ComfortView <br> Plus Support</li></ul>",
 
-    "item9" : 
-    {
-        "about" : "<ul><li> Intel Core i5 11th Gen 11500 2.7GHz Processor</li><li> NVIDIA GeForce RTX 3060 12GB GDDR6</li><li> 16GB DDR4-3200 RAM</li><li> 512GB SSD+1TB HDD</li><li> Microsoft Windows 11 Home</li><li> 10/100/1000 Network</li><li> 2x2 802.11ax WiFi 6</li><li> Bluetooth 5.1</li></ul>"
-    },
+        "item9" : "<ul><li> Intel Core i5 11th Gen 11500 2.7GHz Processor</li><li> NVIDIA GeForce RTX 3060 12GB GDDR6</li><li> 16GB DDR4-3200 RAM</li><li> 512GB SSD+1TB HDD</li><li> Microsoft Windows 11 Home</li><li> 10/100/1000 Network</li><li> 2x2 802.11ax WiFi 6</li><li> Bluetooth 5.1</li></ul>",
+        
+        "item10" :  "<ul><li> Intel Core i5 12th Gen 12400 2.5GHz Processor</li><li> 8GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Intel UHD Graphcis 730</li><li> Microsoft Windows 11 Home</li><li> DVD RW Drive</li><li> 10/100/1000 Network</li><li> 2x2 802.11ax WiFi 6E</li><li> Bluetooth 5.2</li></ul>",
 
-    "item10" : 
-    {
-        "about" : "<ul><li> Intel Core i5 12th Gen 12400 2.5GHz Processor</li><li> 8GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Intel UHD Graphcis 730</li><li> Microsoft Windows 11 Home</li><li> DVD RW Drive</li><li> 10/100/1000 Network</li><li> 2x2 802.11ax WiFi 6E</li><li> Bluetooth 5.2</li></ul>"
-    },
+        "item11" : "<ul><li> Intel Core i5 12th Gen 12400 2.5GHz Processor</li><li> 8GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Intel UHD Graphcis 730</li><li> Microsoft Windows 11 Home</li><li> DVD RW Drive</li><li> 10/100/1000 Network</li><li> 2x2 802.11ax WiFi 6E</li><li> Bluetooth 5.2</li></ul>",
 
-    "item11" : 
-    {
-        "about" : "<ul><li> Intel Core i5 12th Gen 12400 2.5GHz Processor</li><li> 8GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Intel UHD Graphcis 730</li><li> Microsoft Windows 11 Home</li><li> DVD RW Drive</li><li> 10/100/1000 Network</li><li> 2x2 802.11ax WiFi 6E</li><li> Bluetooth 5.2</li></ul>"
-    },
+        "item12" : "<ul><li> Intel Core i7 12th Gen 12700 1.6GHz Processor</li><li> NVIDIA GeForce RTX 3060 12GB GDDR6</li><li> 32GB DDR5-4400 RAM</li><li> 1TB SSD+1TB HDD</li><li> Microsoft Windows 11 Pro</li><li> SD Card Reader</li><li> Killer E3100G Network</li><li> Killer AX 1675</li><li> Bluetooth 5.2</li><li> Air Cooled 65W</li></ul>",
 
-    "item12" : 
-    {
-        "about" : "<ul><li> Intel Core i7 12th Gen 12700 1.6GHz Processor</li><li> NVIDIA GeForce RTX 3060 12GB GDDR6</li><li> 32GB DDR5-4400 RAM</li><li> 1TB SSD+1TB HDD</li><li> Microsoft Windows 11 Pro</li><li> SD Card Reader</li><li> Killer E3100G Network</li><li> Killer AX 1675</li><li> Bluetooth 5.2</li><li> Air Cooled 65W</li></ul>"
-    },
+        "item13" : "<ul><li> Intel Core i5 6500 3.2GHz Processor</li><li> 8GB RAM</li><li> 256GB Solid State Drive</li><li> Intel HD Graphics 530</li><li> Microsoft Windows 10 Pro</li><li> 10/100/1000 Network</li></ul>",
 
-    "item13" : 
-    {
-        "about" : "<ul><li> Intel Core i5 6500 3.2GHz Processor</li><li> 8GB RAM</li><li> 256GB Solid State Drive</li><li> Intel HD Graphics 530</li><li> Microsoft Windows 10 Pro</li><li> 10/100/1000 Network</li></ul>"
-    },
+        "item14" : "<ul><li> Intel Core i5 12th Gen 12500T 2.0GHz Processor</li><li> 16GB DDR4 RAM</li><li> 512GB Solid State Drive</li><li> Intel UHD Graphics 730</li><li> Microsoft Windows 10 Pro</li><li> 2x2 MediaTek Wi-Fi 6</li><li> Bluetooth 5.2</li></ul>",
 
-    "item14" : 
-    {
-        "about" : "<ul><li> Intel Core i5 12th Gen 12500T 2.0GHz Processor</li><li> 16GB DDR4 RAM</li><li> 512GB Solid State Drive</li><li> Intel UHD Graphics 730</li><li> Microsoft Windows 10 Pro</li><li> 2x2 MediaTek Wi-Fi 6</li><li> Bluetooth 5.2</li></ul>"
-    },
+        "item15" : "<ul><li> Intel Core i5 6500 3.2GHz Processor</li><li> 16GB DDR3-1600 RAM</li><li> 512GB SSD</li><li> Intel HD Graphics 530</li><li> Windows 10 Pro</li><li> 10/100/1000 LAN</li><li> Display Not Included</li></ul>",
 
-    "item15" : 
-    {
-        "about" : "<ul><li> Intel Core i5 6500 3.2GHz Processor</li><li> 16GB DDR3-1600 RAM</li><li> 512GB SSD</li><li> Intel HD Graphics 530</li><li> Windows 10 Pro</li><li> 10/100/1000 LAN</li><li> Display Not Included</li></ul>"
-    },
+        "item16" : "<ul><li> Intel Core i5 12th Gen 12400 2.5GHz Processor</li><li> 16GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Intel UHD Graphics 730</li><li> Microsoft Windows 11 Home</li><li> 8X DVD-Writer Double-Layer Drive</li><li> 10/100/1000 Network</li><li> Intel Wireless Wi-Fi 6E AX211 (Gig+)</li><li> Bluetooth 5.2</li></ul>",
 
-    "item16" : 
-    {
-        "about" : "<ul><li> Intel Core i5 12th Gen 12400 2.5GHz Processor</li><li> 16GB DDR4-3200 RAM</li><li> 512GB Solid State Drive</li><li> Intel UHD Graphics 730</li><li> Microsoft Windows 11 Home</li><li> 8X DVD-Writer Double-Layer Drive</li><li> 10/100/1000 Network</li><li> Intel Wireless Wi-Fi 6E AX211 (Gig+)</li><li> Bluetooth 5.2</li></ul>"
-    },
+        "item17" : "Redragon GS520 RGB Computer Gaming Speaker 2.0 3W PC Gaming Speaker, 2.0 Channel Stereo Desktop Computer Speaker with RGB Backlight. - Compact Design - Space saving 2.0 PC speakers on any tight desktop. 2.0 Channel Stereo Core - Equipped with advanced sound drive unit with full range 2.0 channel stereo - Plug & Play for Broad Compatibility - USB powered with 3.5mm audio and mic cables allows this rockstar to party on wide type of stages for PC, TV, Laptop and Smartphone. Get it all connected well on your device and let the party begin. - Indispensable RGB LED - Our Redragon themed RGB LED backlit.",
+        
+        "item18" : "With convenient controls and easy setup, Logitech Z130 2.0 Speaker System makes getting rich stereo sound simple. Just connect the speakers to your laptop with a standard 3.5 mm plug and youre ready to go. These speakers have the power to take your listening experience to the next level.",
+        
+        "item19" : "80 watts of power joins precise digital signal processing (DSP) to deliver immersive, lifelike sound. Hear the crisp high notes, the powerful mid and low-range, and all the bass you can handle. The wireless control dial and dual-position speakers let you control your sound and style. Adjust bass and volume from across the room. Position speakers horizontally or vertically. Connect via Bluetooth, micro USB, 3.5mm input, or all three - and switch between them. Even from across the room.",
+        
+        "item20" : "Beyerdynamic DT 770 Pro closed studio headphones provide professional-quality sound for critical listening applications. Whether you're in the control room or on the recording floor, DT 770 Pro headphones are made to deliver accurate sound while providing a very comfortable fit a real necessity for long sessions. You get an impressive 5Hz-35kHz frequency response, while the closed-ear design helps to minimize outside noise and orient the headphones' speakers to your ears correctly. Built to last and perform reliably, DT 770 headphones make a great addition to any studio.",
+        
+        "item21" : "No matter where you go, the black Sony WH-1000XM4 Wireless Noise-Canceling Over-Ear Headphones deliver pristine sound quality while automatically adjusting ambient sound according to your activity and registered locations, leaving your hands and mind free from the hassle of changing settings just to hear what you want to hear. Plus, the headphones detect when you're wearing them and start and stop your audio for you.",
+        
+        "item22" : "The ATH-M20xBT over-ear wireless headphones include all the features you want and the audio quality you demand. Inspired by our #1 selling ATH-M20x wired professional studio headphones and featuring powerful 40 mm drivers for enhanced low-frequency performance, the ATH-M20xBT Bluetooth headphones deliver an incredible listening experience with full-range, high-fidelity audio and enhanced bass.",
+        
+        "item23" :  "Experience next-level comfort and productivity with the MK850 Performance Wireless Keyboard and Mouse Combo. Hyper-fast scrolling and a full-size keyboard help you get more done at your desk and a cushioned palm rest, curved keyframe and contoured mouse let you power through in comfort. Switch seamlessly between your devices on both the keyboard and mouse",
+        
+        "item24" : "<ul><li>RGB LED Backlit</li><li>Programmable Mouse</li></ul><br>Fantastic for Gamers the Redragon S101 Wired Gaming Keyboard and Mouse Combo features 7 different RGB Lighting modes & effects, 4 backlight brightness levels. The gaming Keyboard is built to withstand the average liquid spill. The integrated wrist rest gives you the comfort you need for marathon gaming sessions. Ergonomic Redragon RED Backlit Gaming Mouse up to 3200 DPI (user adjustable 800/1600/2400/3200 DPI), 30G acceleration, and Weight Tuning Set. Total 6 Buttons of which 5 are programmable. The High-Precision Sensor delivers Pinpoint Accuracy while the Gaming Grade Micro Switches ensure longevity, greater durability, and extreme responsiveness, giving you an even greater edge over your competition."
 
-    "item17" : 
-    {
-        "about" : "Redragon GS520 RGB Computer Gaming Speaker 2.0 3W PC Gaming Speaker, 2.0 Channel Stereo Desktop Computer Speaker with RGB Backlight. - Compact Design - Space saving 2.0 PC speakers on any tight desktop. 2.0 Channel Stereo Core - Equipped with advanced sound drive unit with full range 2.0 channel stereo - Plug & Play for Broad Compatibility - USB powered with 3.5mm audio and mic cables allows this rockstar to party on wide type of stages for PC, TV, Laptop and Smartphone. Get it all connected well on your device and let the party begin. - Indispensable RGB LED - Our Redragon themed RGB LED backlit."
-    },
-
-    "item18" : 
-    {
-        "about" : "With convenient controls and easy setup, Logitech Z130 2.0 Speaker System makes getting rich stereo sound simple. Just connect the speakers to your laptop with a standard 3.5 mm plug and youre ready to go. These speakers have the power to take your listening experience to the next level."
-    },
-
-    "item19" : 
-    {
-        "about" : "80 watts of power joins precise digital signal processing (DSP) to deliver immersive, lifelike sound. Hear the crisp high notes, the powerful mid and low-range, and all the bass you can handle. The wireless control dial and dual-position speakers let you control your sound and style. Adjust bass and volume from across the room. Position speakers horizontally or vertically. Connect via Bluetooth, micro USB, 3.5mm input, or all three - and switch between them. Even from across the room."
-    },
-
-    "item20" : 
-    {
-        "about" : "Beyerdynamic DT 770 Pro closed studio headphones provide professional-quality sound for critical listening applications. Whether you're in the control room or on the recording floor, DT 770 Pro headphones are made to deliver accurate sound while providing a very comfortable fit a real necessity for long sessions. You get an impressive 5Hz-35kHz frequency response, while the closed-ear design helps to minimize outside noise and orient the headphones' speakers to your ears correctly. Built to last and perform reliably, DT 770 headphones make a great addition to any studio."
-    },
-
-    "item21" : 
-    {
-        "about" : "No matter where you go, the black Sony WH-1000XM4 Wireless Noise-Canceling Over-Ear Headphones deliver pristine sound quality while automatically adjusting ambient sound according to your activity and registered locations, leaving your hands and mind free from the hassle of changing settings just to hear what you want to hear. Plus, the headphones detect when you're wearing them and start and stop your audio for you."
-    },
-
-    "item22" : 
-    {
-        "about" : "The ATH-M20xBT over-ear wireless headphones include all the features you want and the audio quality you demand. Inspired by our #1 selling ATH-M20x wired professional studio headphones and featuring powerful 40 mm drivers for enhanced low-frequency performance, the ATH-M20xBT Bluetooth headphones deliver an incredible listening experience with full-range, high-fidelity audio and enhanced bass."
-    },
-
-    "item23" : 
-    {
-        "about" : "Experience next-level comfort and productivity with the MK850 Performance Wireless Keyboard and Mouse Combo. Hyper-fast scrolling and a full-size keyboard help you get more done at your desk and a cushioned palm rest, curved keyframe and contoured mouse let you power through in comfort. Switch seamlessly between your devices on both the keyboard and mouse"
-    },
-
-    "item24" : 
-    {
-        "about" : "<ul><li>RGB LED Backlit</li><li>Programmable Mouse</li></ul><br>Fantastic for Gamers the Redragon S101 Wired Gaming Keyboard and Mouse Combo features 7 different RGB Lighting modes & effects, 4 backlight brightness levels. The gaming Keyboard is built to withstand the average liquid spill. The integrated wrist rest gives you the comfort you need for marathon gaming sessions. Ergonomic Redragon RED Backlit Gaming Mouse up to 3200 DPI (user adjustable 800/1600/2400/3200 DPI), 30G acceleration, and Weight Tuning Set. Total 6 Buttons of which 5 are programmable. The High-Precision Sensor delivers Pinpoint Accuracy while the Gaming Grade Micro Switches ensure longevity, greater durability, and extreme responsiveness, giving you an even greater edge over your competition."
     }
 }
