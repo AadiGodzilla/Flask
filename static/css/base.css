@@ -126,6 +126,7 @@ img {
     text-align: center;
     border: none;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
 }
 
 .buy:hover {
@@ -150,6 +151,7 @@ img {
     cursor: pointer;
     border-radius: 20px;
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
 }
 
 .addcart:hover {

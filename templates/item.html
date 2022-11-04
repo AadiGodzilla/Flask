@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>LAPTOP1</title>
+		<title>{{header1}}</title>
 		<link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
 	</head>
 	<body>
@@ -23,7 +23,7 @@
         			<img src = "{{imgsrc}}">
 				</div>
         		<div class="section1">
-					<div class="header1">{{header1}}</div>
+					<div class="header1">{% with headvar = header1 %} {{headvar}} {% endwith %}</div>
         			<div class="header2">${{header2}}</div>
 					<form action="/cart", method="POST">
     					<input type = 'submit' class="buy" value="Buy Now" name = {{Buy}}>
