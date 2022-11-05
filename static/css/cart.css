@@ -80,15 +80,16 @@
     border-width: 1px solid black;
 }
 
-tr, th, td {
+tr, td {
     text-align: center;
     padding: 15px;
     border: 1px solid black;
-    border-collapse: collapse;
+    border-collapse: none;
 }
 
 .table thead , th {
     background-color: black;
+    padding: 15px;
     color: white;
     border:1px solid white;
 }
@@ -112,7 +113,7 @@ tr, th, td {
     position: relative;
     width: 80%;
     margin: auto;
-    max-height: 260px;
+    height: 260px;
     overflow-y: scroll;
     margin-bottom: 2%;
 }
