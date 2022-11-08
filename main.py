@@ -1,3 +1,4 @@
+#libraries
 import uuid, math, json
 from flask import Flask, render_template, request, redirect, url_for
 from mysql.connector import connect
@@ -20,6 +21,7 @@ with open('static/json/about.json') as f:
 
 about_list = list(js.values())
 
+#automatic database and table creation in mysql
 mainconn = connect(host = 'localhost', user = 'root', password = 'aadi')
 maincur = mainconn.cursor()
 
@@ -52,6 +54,7 @@ mainconn.commit()
 
 mainconn.close()
 
+# main page route and function
 @app.route('/')
 def home():
     if var == 'PROFILE':
@@ -59,6 +62,7 @@ def home():
     else:
         return render_template('home.html', var='LOGIN', button_var='SIGN UP')
 
+# product page route and function
 @app.route('/product/')
 def product():
     if var == 'PROFILE':
@@ -66,7 +70,7 @@ def product():
     else:
         return render_template('product.html', var='LOGIN', button_var='SIGN_UP')
 
-
+# individual item page route and function
 @app.route('/product/<itemname>')
 def products(itemname):
     global header1, header2
@@ -240,6 +244,7 @@ def products(itemname):
         else:
             return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/per8.jpg', Buy = 'Buy24', addcart = 'addcart24', header1 = header1, header2 = header2, about = list(about_list[0].values())[23])
 
+# sign-up page route and function
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
     global var
@@ -270,6 +275,7 @@ def signup():
                 conn2.commit()
                 return render_template('home.html', var='LOGIN', button_var='SIGN UP')
 
+# login page route and function
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     global var, email
@@ -296,6 +302,7 @@ def login():
         except TypeError:
             return render_template('error.html', error_message = 'Account not registered', btn_name = 'ac_not_reg')
 
+# Profile page route and function
 @app.route('/profile', methods=['POST', 'GET'])
 def profile():
     global email, var
@@ -323,7 +330,8 @@ def profile():
             conn2.commit()
             return redirect(url_for('home'))
 
-@app.route('/cart', methods=['POST'])
+# cart's page function this route will lead you to the dashboard page
+@app.route('/cart', methods=['GET', 'POST'])
 def cart():
     global email, var, total, proname
 
@@ -331,6 +339,9 @@ def cart():
     conn3 = connect(host='localhost', user='root', password='aadi', database='carts')
     cur2 = conn2.cursor()
     cur3 = conn3.cursor()
+
+    if request.method == 'GET':
+        return redirect(url_for('dashboard'))
 
     if request.method == 'POST':
 
@@ -716,6 +727,7 @@ def cart():
         else:
             return render_template('error.html', error_message = 'Please Login or Create an Account', btn_name = 'account_404')
 
+# cart dashboard page route and function
 @app.route('/dashboard')
 def dashboard():
     global email, var, total
@@ -733,6 +745,7 @@ def dashboard():
     else:
         return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
 
+# payment registration page route and function (This page will only be shown at first purchase)
 @app.route('/payment', methods=['POST'])
 def payment():
     global email
@@ -764,6 +777,7 @@ def payment():
                 conn.commit()
                 return redirect(url_for('home'))
 
+# purchase page route and function
 @app.route('/purchase', methods=['POST', 'GET'])
 def purchase():
     global total, email, proname
@@ -797,12 +811,14 @@ def purchase():
             else:
                 return render_template('error.html', error_message='Amount is too low', btn_name = 'low_amt')
 
+# Success page route and function after a successful purchase
 @app.route('/success', methods=['POST'])
 def success():
     if request.method == 'POST':
         if 'success' in request.form:
             return redirect(url_for('product'))
 
+# Error page route and function for multiple errors
 @app.route('/error', methods=['POST'])
 def error():
     if request.method == 'POST':
@@ -815,6 +831,7 @@ def error():
         if 'ac_not_reg' in request.form:
             return redirect(url_for('signup'))
 
+# admin page route and function
 @app.route('/admin', methods = ['GET', 'POST'])
 def admin():
         
