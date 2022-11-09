@@ -3,6 +3,7 @@ import uuid, math, json
 from flask import Flask, render_template, request, redirect, url_for
 from mysql.connector import connect
 
+# webapp Initialization
 app = Flask(__name__)
 
 uuid = uuid.uuid4().hex
