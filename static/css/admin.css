@@ -61,36 +61,6 @@ h1 {
     top: 4%;
 }
 
-.billingInfo {
-    position: relative;
-    top: 2%;
-    margin: auto;
-    width: 99%;
-    height: 50%;
-    background-color: white;
-    border-radius: 20px;
-}
-
-.billingInfo table {
-    margin: auto;
-    width: 95%;
-}
-
-.table_bill {
-    position: relative;
-    margin: auto;
-    top: 40%;
-    transform: translateY(-50%);
-    width: 95%;
-    height: 50%;
-    overflow-y: scroll;
-}
-
-.billingInfo h1 {
-    position: relative;
-    padding-top: 2%;
-}
-
 .welcome {
     position: absolute;
     width: 39.5%;
@@ -132,4 +102,34 @@ p {
 
 .net table thead th {
     border-color: white;
+}
+
+.billingInfo {
+    position: relative;
+    top: 2%;
+    margin: auto;
+    width: 99%;
+    height: 50%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.billingInfo table {
+    margin: auto;
+    width: 95%;
+}
+
+.table_bill {
+    position: relative;
+    margin: auto;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 95%;
+    height: 50%;
+    overflow-y: scroll;
+}
+
+.billingInfo h1 {
+    position: relative;
+    padding-top: 2%;
 }
