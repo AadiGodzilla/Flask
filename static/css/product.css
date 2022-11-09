@@ -142,4 +142,8 @@ button:hover {
     outline: none;
 }
 
+.search_btn:active {
+    background-color: rgb(1, 24, 65);
+}
+
 
