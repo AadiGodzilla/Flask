@@ -18,7 +18,7 @@ body {
 .accounts {
     position: relative;
     width: 49%;
-    height: 60%;
+    height: 50%;
     top: 1%;
     left: 0.5%;
     background-color: white;
@@ -64,7 +64,7 @@ h1 {
 .welcome {
     position: absolute;
     width: 39.5%;
-    height: 60%;
+    height: 50%;
     top: 1%;
     left: 50%;
     padding-left: 5%;
@@ -107,9 +107,11 @@ p {
 .billingInfo {
     position: relative;
     top: 2%;
-    margin: auto;
+    margin-bottom: 2px;
+    left: 50%;
+    height: 46%;
+    transform: translateX(-50%);
     width: 99%;
-    height: 50%;
     background-color: white;
     border-radius: 20px;
 }
@@ -125,11 +127,12 @@ p {
     top: 40%;
     transform: translateY(-50%);
     width: 95%;
-    height: 50%;
+    height: 60%;
     overflow-y: scroll;
 }
 
 .billingInfo h1 {
     position: relative;
-    padding-top: 2%;
+    padding-top: 1%;
+    margin-bottom: 0%;
 }
