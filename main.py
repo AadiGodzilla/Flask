@@ -1,5 +1,5 @@
 # libraries
-import uuid, math, json
+import uuid, math, json, datetime
 from flask import Flask, render_template, request, redirect, url_for
 from mysql.connector import connect
 
@@ -348,383 +348,397 @@ def cart():
 
         if var == 'PROFILE':
             conn = connect(host='localhost', user='root', password='aadi', database='carts')
+            conn1 = connect(host='localhost', user='root', password='aadi', database='billing_info')
             cur = conn.cursor()
-            if 'addcart1' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item1'))
-            elif 'addcart2' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item2'))
-            elif 'addcart3' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item3'))
-            elif 'addcart4' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item4'))
-            elif 'addcart5' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item5'))
-            elif 'addcart6' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item6'))
-            elif 'addcart7' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item7'))
-            elif 'addcart8' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item8'))
-            elif 'addcart9' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item9'))
-            elif 'addcart10' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item10'))
-            elif 'addcart11' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item11'))
-            elif 'addcart12' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item12'))
-            elif 'addcart13' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item13'))
-            elif 'addcart14' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item14'))
-            elif 'addcart15' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item15'))
-            elif 'addcart16' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item16'))
-            elif 'addcart17' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item17'))
-            elif 'addcart18' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item18'))
-            elif 'addcart19' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item19'))
-            elif 'addcart20' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item20'))
-            elif 'addcart21' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item21'))
-            elif 'addcart22' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item22'))
-            elif 'addcart23' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item23'))
-            elif 'addcart24' in request.form:
-                cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
-                conn.commit()
-                return redirect(url_for('products', itemname='item24'))
+            cur1 = conn1.cursor()
 
-            elif 'Buy1' in request.form:
-                proname = header1                
-                total = int(math.ceil(2399.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy2' in request.form:
-                proname = header1                
-                total = int(math.ceil(1399.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy3' in request.form:
-                proname = header1                
-                total = int(math.ceil(999.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy4' in request.form:
-                proname = header1                
-                total = int(math.ceil(459.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy5' in request.form:
-                proname = header1                
-                total = int(math.ceil(3699.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy6' in request.form:
-                proname = header1                
-                total = int(math.ceil(1299.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy7' in request.form:
-                proname = header1                
-                total = int(math.ceil(1899.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy8' in request.form:
-                proname = header1                
-                total = int(math.ceil(2999.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy9' in request.form:
-                proname = header1                
-                total = int(math.ceil(1349.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy10' in request.form:
-                proname = header1
-                total = int(math.ceil(1239.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy11' in request.form:
-                proname = header1
-                total = int(math.ceil(649.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy12' in request.form:
-                proname = header1
-                total = int(math.ceil(1799.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy13' in request.form:
-                proname = header1
-                total = int(math.ceil(199.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy14' in request.form:
-                proname = header1
-                total = int(math.ceil(899.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy15' in request.form:
-                proname = header1
-                total = int(math.ceil(249.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy16' in request.form:
-                proname = header1
-                total = int(math.ceil(619.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy17' in request.form:
-                proname = header1
-                total = int(math.ceil(34.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy18' in request.form:
-                proname = header1
-                total = int(math.ceil(39.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy19' in request.form:
-                proname = header1
-                total = int(math.ceil(119.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy20' in request.form:
-                proname = header1
-                total = int(math.ceil(179.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy21' in request.form:
-                proname = header1
-                total = int(math.ceil(349.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy22' in request.form:
-                proname = header1
-                total = int(math.ceil(79.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy23' in request.form:
-                proname = header1
-                total = int(math.ceil(99.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
-            elif 'Buy24' in request.form:
-                proname = header1
-                total = int(math.ceil(43.99))
-                cur3.execute('DELETE FROM `%s`', (email,))
-                conn3.commit()
-                cur2.execute('SELECT Email_Address FROM billing_info')
-                ers = cur2.fetchall()
-                if any(email in i for i in ers):
-                    return redirect(url_for('purchase'))
-                else:
-                    return render_template('payment.html')
+            cur1.execute('SELECT Expire_Date FROM billing_info WHERE Email_Address = %s', (email,))
+            dates = cur1.fetchone()
 
-            elif 'buyall' in request.form:
-                proname = ''
-                if var == 'PROFILE':
-                    cur2.execute('SELECT Email_Address FROM billing_info')
-                    ers = cur2.fetchall()
-                    if any(email in i for i in ers):
-                        return redirect(url_for('purchase'))
-                    else:
-                        return render_template('payment.html')
-            elif 'clearall' in request.form: 
-                if var == 'PROFILE':
-                    cur3.execute('DELETE FROM `%s`', (email,))
-                    conn3.commit()
-                    return redirect(url_for('dashboard'))
+            try:
+                if datetime.datetime.strptime(str(dates[0]), '%Y-%m-%d') <= datetime.datetime.today():
+                    cur1.execute('DELETE FROM billing_info WHERE Email_Address = %s', (email,))
+                    conn1.commit()
+                    return render_template('error.html', error_message = 'Your Credit Card Has Expired', btn_name = 'expired')
+                else:
+                    if 'addcart1' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item1'))
+                    elif 'addcart2' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item2'))
+                    elif 'addcart3' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item3'))
+                    elif 'addcart4' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item4'))
+                    elif 'addcart5' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item5'))
+                    elif 'addcart6' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item6'))
+                    elif 'addcart7' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item7'))
+                    elif 'addcart8' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item8'))
+                    elif 'addcart9' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item9'))
+                    elif 'addcart10' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item10'))
+                    elif 'addcart11' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item11'))
+                    elif 'addcart12' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item12'))
+                    elif 'addcart13' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item13'))
+                    elif 'addcart14' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item14'))
+                    elif 'addcart15' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item15'))
+                    elif 'addcart16' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item16'))
+                    elif 'addcart17' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item17'))
+                    elif 'addcart18' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item18'))
+                    elif 'addcart19' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item19'))
+                    elif 'addcart20' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item20'))
+                    elif 'addcart21' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item21'))
+                    elif 'addcart22' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item22'))
+                    elif 'addcart23' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item23'))
+                    elif 'addcart24' in request.form:
+                        cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
+                        conn.commit()
+                        return redirect(url_for('products', itemname='item24'))
+
+                    elif 'Buy1' in request.form:
+                        proname = header1                
+                        total = int(math.ceil(2399.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy2' in request.form:
+                        proname = header1                
+                        total = int(math.ceil(1399.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy3' in request.form:
+                        proname = header1                
+                        total = int(math.ceil(999.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy4' in request.form:
+                        proname = header1                
+                        total = int(math.ceil(459.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy5' in request.form:
+                        proname = header1                
+                        total = int(math.ceil(3699.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy6' in request.form:
+                        proname = header1                
+                        total = int(math.ceil(1299.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy7' in request.form:
+                        proname = header1                
+                        total = int(math.ceil(1899.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy8' in request.form:
+                        proname = header1                
+                        total = int(math.ceil(2999.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy9' in request.form:
+                        proname = header1                
+                        total = int(math.ceil(1349.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy10' in request.form:
+                        proname = header1
+                        total = int(math.ceil(1239.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy11' in request.form:
+                        proname = header1
+                        total = int(math.ceil(649.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy12' in request.form:
+                        proname = header1
+                        total = int(math.ceil(1799.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy13' in request.form:
+                        proname = header1
+                        total = int(math.ceil(199.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy14' in request.form:
+                        proname = header1
+                        total = int(math.ceil(899.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy15' in request.form:
+                        proname = header1
+                        total = int(math.ceil(249.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy16' in request.form:
+                        proname = header1
+                        total = int(math.ceil(619.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy17' in request.form:
+                        proname = header1
+                        total = int(math.ceil(34.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy18' in request.form:
+                        proname = header1
+                        total = int(math.ceil(39.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy19' in request.form:
+                        proname = header1
+                        total = int(math.ceil(119.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy20' in request.form:
+                        proname = header1
+                        total = int(math.ceil(179.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy21' in request.form:
+                        proname = header1
+                        total = int(math.ceil(349.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy22' in request.form:
+                        proname = header1
+                        total = int(math.ceil(79.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy23' in request.form:
+                        proname = header1
+                        total = int(math.ceil(99.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+                    elif 'Buy24' in request.form:
+                        proname = header1
+                        total = int(math.ceil(43.99))
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        cur2.execute('SELECT Email_Address FROM billing_info')
+                        ers = cur2.fetchall()
+                        if any(email in i for i in ers):
+                            return redirect(url_for('purchase'))
+                        else:
+                            return redirect(url_for('payment'))
+
+                    elif 'buyall' in request.form:
+                        proname = ''
+                        if var == 'PROFILE':
+                            cur2.execute('SELECT Email_Address FROM billing_info')
+                            ers = cur2.fetchall()
+                            if any(email in i for i in ers):
+                                return redirect(url_for('purchase'))
+                            else:
+                                return redirect(url_for('payment'))
+                if 'clearall' in request.form: 
+                    if var == 'PROFILE':
+                        cur3.execute('DELETE FROM `%s`', (email,))
+                        conn3.commit()
+                        return redirect(url_for('dashboard'))
+            except TypeError:
+                return redirect(url_for('payment'))
         else:
             return render_template('error.html', error_message = 'Please Login or Create an Account', btn_name = 'account_404')
 
@@ -747,7 +761,7 @@ def dashboard():
         return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
 
 # payment registration page route and function (This page will only be shown at first purchase)
-@app.route('/payment', methods=['POST'])
+@app.route('/payment', methods=['POST', 'GET'])
 def payment():
     global email
 
@@ -757,6 +771,8 @@ def payment():
     cur.execute('SELECT * FROM billing_info')
     crs = cur.fetchall()
 
+    if request.method == 'GET':
+        return render_template('payment.html')
     if request.method == 'POST':
         cur.execute('SELECT Email_Address FROM billing_info')
         ers = cur.fetchall()
@@ -772,11 +788,14 @@ def payment():
                 noc = request.form['noc']
                 creditno = request.form['creditno']
                 expdate = request.form['expdate']
-                cur.execute(
-                    'INSERT INTO billing_info (First_Name, Last_Name, Email_Address, Address, City, Zip_Code, Name_On_Card, Credit_Card_Number, Expire_Date) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)',
-                    (fname, lname, email, address, city, zip_code, noc, creditno, expdate,))
-                conn.commit()
-                return redirect(url_for('home'))
+                if datetime.datetime.strptime(expdate, '%Y-%m-%d') <= datetime.datetime.today():
+                    return render_template('error.html', error_message = 'Credit Card has Expired Try Again', btn_name = 'expired')
+                else:
+                    cur.execute(
+                        'INSERT INTO billing_info (First_Name, Last_Name, Email_Address, Address, City, Zip_Code, Name_On_Card, Credit_Card_Number, Expire_Date) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)',
+                        (fname, lname, email, address, city, zip_code, noc, creditno, expdate,))
+                    conn.commit()
+                    return redirect(url_for('home'))
 
 # purchase page route and function
 @app.route('/purchase', methods=['POST', 'GET'])
@@ -831,6 +850,8 @@ def error():
             return redirect(url_for('login'))
         if 'ac_not_reg' in request.form:
             return redirect(url_for('signup'))
+        if 'expired' in request.form:
+            return redirect(url_for('payment'))
 
 # admin page route and function
 @app.route('/admin', methods = ['GET', 'POST'])
