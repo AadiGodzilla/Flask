@@ -28,10 +28,11 @@ body {
 .accounts table {
     position: relative;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 0%;
     width: 100%;
     border: 0px solid black;
     border-collapse:separate;
+    font-size: smaller;
 }
 
 .table_ac {
@@ -76,13 +77,14 @@ h1 {
 .revenue_table {
     position: relative;
     top: 7.5%;
-    height: 57.5%;
+    height: 52.5%;
     margin: auto;
     overflow-y: scroll;
 }
 
 .revenue_table table {
     width: 100%;
+    font-size: smaller;
 }
 
 p {
@@ -119,6 +121,7 @@ p {
 .billingInfo table {
     margin: auto;
     width: 95%;
+    font-size: smaller;
 }
 
 .table_bill {
