@@ -1,7 +1,7 @@
 # libraries
 import uuid, math, json, datetime
 from flask import Flask, render_template, request, redirect, url_for
-from mysql.connector import connect
+from mysql.connector import connect, IntegrityError, DatabaseError
 
 # webapp Initialization
 app = Flask(__name__)
@@ -359,7 +359,7 @@ def cart():
                 if datetime.datetime.strptime(str(dates[0]), '%Y-%m-%d') <= datetime.datetime.today():
                     cur1.execute('DELETE FROM billing_info WHERE Email_Address = %s', (email,))
                     conn1.commit()
-                    return render_template('error.html', error_message = 'Your Credit Card Has Expired', btn_name = 'expired')
+                    return render_template('error.html', error_message = 'Your Credit Card Has Expired', btn_name = 'payment_error')
                 else:
                     if 'addcart1' in request.form:
                         cur.execute('INSERT INTO `%s`(Product, Price) VALUES (%s, %s);', (email, header1, header2))
@@ -788,15 +788,25 @@ def payment():
                 noc = request.form['noc']
                 creditno = request.form['creditno']
                 expdate = request.form['expdate']
-                if datetime.datetime.strptime(expdate, '%Y-%m-%d') <= datetime.datetime.today():
-                    return render_template('error.html', error_message = 'Credit Card has Expired Try Again', btn_name = 'expired')
-                else:
-                    cur.execute(
-                        'INSERT INTO billing_info (First_Name, Last_Name, Email_Address, Address, City, Zip_Code, Name_On_Card, Credit_Card_Number, Expire_Date) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)',
-                        (fname, lname, email, address, city, zip_code, noc, creditno, expdate,))
-                    conn.commit()
-                    return redirect(url_for('home'))
-
+                try:
+                    if datetime.datetime.strptime(expdate, '%Y-%m-%d') <= datetime.datetime.today():
+                        return render_template('error.html', error_message = 'Credit Card has Expired Try Again', btn_name = 'payment_error')
+                except ValueError:
+                    return render_template('error.html', error_message = 'Date is Wrong, Try Again', btn_name = 'payment_error')  
+                try:                  
+                    if fname == "" or lname == "" or address == "" or city == "" or zip_code == "" or noc == "" or creditno == "" or expdate == "":
+                        return render_template('error.html', error_message = 'Fields cannot be empty', btn_name = 'payment_error')
+                    else:
+                        try:
+                            cur.execute(
+                                'INSERT INTO billing_info (First_Name, Last_Name, Email_Address, Address, City, Zip_Code, Name_On_Card, Credit_Card_Number, Expire_Date) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)',
+                                (fname, lname, email, address, city, zip_code, noc, creditno, expdate,))
+                            conn.commit()
+                            return redirect(url_for('home'))
+                        except IntegrityError:
+                            return render_template('error.html', error_message = 'Credit Card Number Already Exists', btn_name = 'payment_error')
+                except DatabaseError:
+                    return render_template('error.html', error_message = 'Please sEnter a Valid Information', btn_name = "payment_error")
 # purchase page route and function
 @app.route('/purchase', methods=['POST', 'GET'])
 def purchase():
@@ -850,7 +860,7 @@ def error():
             return redirect(url_for('login'))
         if 'ac_not_reg' in request.form:
             return redirect(url_for('signup'))
-        if 'expired' in request.form:
+        if 'payment_error' in request.form:
             return redirect(url_for('payment'))
 
 # admin page route and function
