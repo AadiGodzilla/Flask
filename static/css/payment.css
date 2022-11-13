@@ -38,7 +38,7 @@ p {
   margin-bottom: 0.25%;
 }
 
-input[type = text], input[type = date] {
+input[type = text], input[type = date], input[type = number] {
   position: relative;
   left: 50%;
   padding-left: 2%;
@@ -87,4 +87,13 @@ input[type = 'submit'] {
 
 input[type = 'submit']:hover {
   background-color: rgb(64, 139, 224, 0.6);
+}
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  display: none;
+}
+
+input[type = date]::-webkit-calendar-picker-indicator {
+  width: 4%;
+  margin: 2%;
 }

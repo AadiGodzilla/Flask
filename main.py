@@ -741,7 +741,7 @@ def cart():
                 return redirect(url_for('payment'))
         else:
             return render_template('error.html', error_message = 'Please Login or Create an Account', btn_name = 'account_404')
-
+            
 # cart dashboard page route and function
 @app.route('/dashboard')
 def dashboard():
@@ -755,7 +755,7 @@ def dashboard():
         data = cur.fetchall()
         cur.execute('SELECT Price FROM `%s`', (email,))
         prs = cur.fetchall()
-        total = int(math.ceil(int(sum(map(sum, prs)))))
+        total = int(math.ceil((float(sum(map(sum, prs))))))
         return render_template('cart.html', var='PROFILE', data=data, total = total)
     else:
         return render_template('error.html', error_message='Please Login or Create an Account', btn_name = 'account_404')
