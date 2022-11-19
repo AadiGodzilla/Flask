@@ -80,58 +80,58 @@ def products(itemname):
         header1 = 'LAPTOP1'
         header2 = 2399.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product1.jpg', Buy = 'Buy1', addcart = 'addcart1', header1 = header1, header2 = header2, about = list(about_list[0].values())[0])
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/laptop1.jpg', Buy = 'Buy1', addcart = 'addcart1', header1 = header1, header2 = header2, about = list(about_list[0].values())[0])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product1.jpg', Buy = 'Buy1', addcart = 'addcart1', header1 = header1, header2 = header2, about = list(about_list[0].values())[0])
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/laptop1.jpg', Buy = 'Buy1', addcart = 'addcart1', header1 = header1, header2 = header2, about = list(about_list[0].values())[0])
     if itemname == 'item2':
         header1 = 'LAPTOP2'
         header2 = 1399.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product2.jpg', Buy = 'Buy2', addcart = 'addcart2', header1 = header1, header2 = header2, about = list(about_list[0].values())[1])
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/laptop2.jpg', Buy = 'Buy2', addcart = 'addcart2', header1 = header1, header2 = header2, about = list(about_list[0].values())[1])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product2.jpg', Buy = 'Buy2', addcart = 'addcart2', header1 = header1, header2 = header2, about = list(about_list[0].values())[1])
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/laptop2.jpg', Buy = 'Buy2', addcart = 'addcart2', header1 = header1, header2 = header2, about = list(about_list[0].values())[1])
     if itemname == 'item3':
         header1 = 'LAPTOP3'
         header2 = 999.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product3.jpg', Buy = 'Buy3', addcart = 'addcart3', header1 = header1, header2 = header2, about = list(about_list[0].values())[2])
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/laptop3.jpg', Buy = 'Buy3', addcart = 'addcart3', header1 = header1, header2 = header2, about = list(about_list[0].values())[2])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product3.jpg', Buy = 'Buy3', addcart = 'addcart3', header1 = header1, header2 = header2, about = list(about_list[0].values())[2])
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/laptop3.jpg', Buy = 'Buy3', addcart = 'addcart3', header1 = header1, header2 = header2, about = list(about_list[0].values())[2])
     if itemname == 'item4':
         header1 = 'LAPTOP4'
         header2 = 459.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product4.jpg', Buy = 'Buy4', addcart = 'addcart4', header1 = header1, header2 = header2, about = list(about_list[0].values())[3])
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/laptop4.jpg', Buy = 'Buy4', addcart = 'addcart4', header1 = header1, header2 = header2, about = list(about_list[0].values())[3])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product4.jpg', Buy = 'Buy4', addcart = 'addcart4', header1 = header1, header2 = header2, about = list(about_list[0].values())[3])
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/laptop4.jpg', Buy = 'Buy4', addcart = 'addcart4', header1 = header1, header2 = header2, about = list(about_list[0].values())[3])
     if itemname == 'item5':
         header1 = 'LAPTOP5'
         header2 = 3699.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product5.jpg', Buy = 'Buy5', addcart = 'addcart5', header1 = header1, header2 = header2, about = list(about_list[0].values())[4])
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/laptop5.jpg', Buy = 'Buy5', addcart = 'addcart5', header1 = header1, header2 = header2, about = list(about_list[0].values())[4])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product5.jpg', Buy = 'Buy5', addcart = 'addcart5', header1 = header1, header2 = header2, about = list(about_list[0].values())[4])
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/laptop5.jpg', Buy = 'Buy5', addcart = 'addcart5', header1 = header1, header2 = header2, about = list(about_list[0].values())[4])
     if itemname == 'item6':
         header1 = 'LAPTOP6'
         header2 = 1299.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product6.jpg', Buy = 'Buy6', addcart = 'addcart6', header1 = header1, header2 = header2, about = list(about_list[0].values())[5])
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/laptop6.jpg', Buy = 'Buy6', addcart = 'addcart6', header1 = header1, header2 = header2, about = list(about_list[0].values())[5])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product6.jpg', Buy = 'Buy6', addcart = 'addcart6', header1 = header1, header2 = header2, about = list(about_list[0].values())[5])
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/laptop6.jpg', Buy = 'Buy6', addcart = 'addcart6', header1 = header1, header2 = header2, about = list(about_list[0].values())[5])
     if itemname == 'item7':
         header1 = 'LAPTOP7'
         header2 = 1899.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product7.jpg', Buy = 'Buy7', addcart = 'addcart7', header1 = header1, header2 = header2, about = list(about_list[0].values())[6])
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/laptop7.jpg', Buy = 'Buy7', addcart = 'addcart7', header1 = header1, header2 = header2, about = list(about_list[0].values())[6])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product7.jpg', Buy = 'Buy7', addcart = 'addcart7', header1 = header1, header2 = header2, about = list(about_list[0].values())[6])
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/laptop7.jpg', Buy = 'Buy7', addcart = 'addcart7', header1 = header1, header2 = header2, about = list(about_list[0].values())[6])
     if itemname == 'item8':
         header1 = 'LAPTOP8'
         header2 = 2999.99
         if var == 'PROFILE':
-            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/product8.jpg', Buy = 'Buy8', addcart = 'addcart8', header1 = header1, header2 = header2, about = list(about_list[0].values())[7])
+            return render_template('item.html', var = 'PROFILE', imgsrc = '../static/images/laptop8.jpg', Buy = 'Buy8', addcart = 'addcart8', header1 = header1, header2 = header2, about = list(about_list[0].values())[7])
         else:
-            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/product8.jpg', Buy = 'Buy8', addcart = 'addcart8', header1 = header1, header2 = header2, about = list(about_list[0].values())[7])
+            return render_template('item.html', var = 'LOGIN',imgsrc = '../static/images/laptop8.jpg', Buy = 'Buy8', addcart = 'addcart8', header1 = header1, header2 = header2, about = list(about_list[0].values())[7])
     if itemname == 'item9':
         header1 = 'DESKTOP1'
         header2 = 1349.99
