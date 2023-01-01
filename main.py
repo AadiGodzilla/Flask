@@ -5,7 +5,6 @@ from mysql.connector import connect, IntegrityError, DatabaseError
 
 # webapp Initialization
 app = Flask(__name__)
-
 uuid = uuid.uuid4().hex
 
 app.config['SECRET_KEY'] = uuid
@@ -272,8 +271,8 @@ def signup():
             if any(email in result for result in rs):
                 return render_template('error3.html', error_message='Account Already Registered Please Login')
             else:
-                cur.execute('create table `%s`(Product varchar(255), Price float(10,2));', (email,))
-                conn2.commit()
+                cursor.execute('create table `%s`(Product varchar(255), Price float(10,2));', (email,))
+                conn.commit()
                 return render_template('home.html', var='LOGIN', button_var='SIGN UP')
 
 # login page route and function
@@ -783,6 +782,7 @@ def payment():
                 fname = request.form['fname']
                 lname = request.form['lname']
                 address = request.form['Address']
+                phoneno = request.form['Phone']
                 city = request.form['City']
                 zip_code = request.form['zip']
                 noc = request.form['noc']
@@ -799,8 +799,8 @@ def payment():
                     else:
                         try:
                             cur.execute(
-                                'INSERT INTO billing_info (First_Name, Last_Name, Email_Address, Address, City, Zip_Code, Name_On_Card, Credit_Card_Number, Expire_Date) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)',
-                                (fname, lname, email, address, city, zip_code, noc, creditno, expdate,))
+                                'INSERT INTO billing_info VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',
+                                (fname, lname, email, address, phoneno, city, zip_code, noc, creditno, expdate,))
                             conn.commit()
                             return redirect(url_for('home'))
                         except IntegrityError:
