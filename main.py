@@ -45,7 +45,7 @@ maincur2.execute("create table IF NOT EXISTS `'admin@gmail.com'`(Product varchar
 mainconn.commit()
 
 maincur3.execute('USE billing_info')
-maincur3.execute('create table IF NOT EXISTS billing_info(First_Name varchar(255), Last_Name varchar(255), Email_Address varchar(255), Address varchar(255), City varchar(255), Zip_Code int, Name_On_Card varchar(255), Credit_Card_Number bigint, Expire_Date date);')
+maincur3.execute('create table IF NOT EXISTS billing_info(First_Name varchar(255), Last_Name varchar(255), Email_Address varchar(255), Address varchar(255), Phone_Number bigint ,City varchar(255), Zip_Code int, Name_On_Card varchar(255), Credit_Card_Number bigint, Expire_Date date);')
 mainconn.commit()
 
 maincur3.execute('USE revenue')
